@@ -1,6 +1,4 @@
 node_modules
 .temp
 .cache
-
-
-my
+dist

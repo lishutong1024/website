@@ -18,6 +18,9 @@ importers:
       '@vuepress/bundler-vite':
         specifier: 2.0.0-rc.14
         version: 2.0.0-rc.14(@types/node@22.1.0)(sass@1.77.8)(typescript@5.5.4)
+      '@vuepress/plugin-baidu-analytics':
+        specifier: 2.0.0-rc.40
+        version: 2.0.0-rc.40(typescript@5.5.4)(vuepress@2.0.0-rc.14(@vuepress/bundler-vite@2.0.0-rc.14(@types/node@22.1.0)(sass@1.77.8)(typescript@5.5.4))(typescript@5.5.4)(vue@3.4.36(typescript@5.5.4)))
       vue:
         specifier: ^3.4.36
         version: 3.4.36(typescript@5.5.4)
@@ -972,6 +975,11 @@ packages:
 
   '@vuepress/plugin-active-header-links@2.0.0-rc.40':
     resolution: {integrity: sha512-Hh4TPhq/xQbooOamFpJoOYNJGgHFePH7BErN9rZ3/kbvRmfm9gHUaAV+8BghMluRMFRY1K8cvDw/9Z9MYQBa1g==}
+    peerDependencies:
+      vuepress: 2.0.0-rc.14
+
+  '@vuepress/plugin-baidu-analytics@2.0.0-rc.40':
+    resolution: {integrity: sha512-x00dAiQqdAuMlUj6vwNTI0v/HlmYMMVDJor9xFdiHqqk6yHm9ZwhgGxWwg0IX74rNTdBD/kTNNy75ZvjZIRpIg==}
     peerDependencies:
       vuepress: 2.0.0-rc.14
 
@@ -3128,6 +3136,14 @@ snapshots:
       vuepress: 2.0.0-rc.14(@vuepress/bundler-vite@2.0.0-rc.14(@types/node@22.1.0)(sass@1.77.8)(typescript@5.5.4))(typescript@5.5.4)(vue@3.4.36(typescript@5.5.4))
     transitivePeerDependencies:
       - '@vue/composition-api'
+      - typescript
+
+  '@vuepress/plugin-baidu-analytics@2.0.0-rc.40(typescript@5.5.4)(vuepress@2.0.0-rc.14(@vuepress/bundler-vite@2.0.0-rc.14(@types/node@22.1.0)(sass@1.77.8)(typescript@5.5.4))(typescript@5.5.4)(vue@3.4.36(typescript@5.5.4)))':
+    dependencies:
+      '@vuepress/helper': 2.0.0-rc.40(typescript@5.5.4)(vuepress@2.0.0-rc.14(@vuepress/bundler-vite@2.0.0-rc.14(@types/node@22.1.0)(sass@1.77.8)(typescript@5.5.4))(typescript@5.5.4)(vue@3.4.36(typescript@5.5.4)))
+      vue: 3.4.36(typescript@5.5.4)
+      vuepress: 2.0.0-rc.14(@vuepress/bundler-vite@2.0.0-rc.14(@types/node@22.1.0)(sass@1.77.8)(typescript@5.5.4))(typescript@5.5.4)(vue@3.4.36(typescript@5.5.4))
+    transitivePeerDependencies:
       - typescript
 
   '@vuepress/plugin-cache@2.0.0-rc.39(vuepress@2.0.0-rc.14(@vuepress/bundler-vite@2.0.0-rc.14(@types/node@22.1.0)(sass@1.77.8)(typescript@5.5.4))(typescript@5.5.4)(vue@3.4.36(typescript@5.5.4)))':

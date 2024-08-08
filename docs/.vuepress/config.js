@@ -1,15 +1,23 @@
 import { defineUserConfig } from 'vuepress'
 import { viteBundler } from '@vuepress/bundler-vite'
 import { plumeTheme } from 'vuepress-theme-plume'
+import { baiduAnalyticsPlugin } from '@vuepress/plugin-baidu-analytics'
 
 export default defineUserConfig({
     lang: 'zh-CN',
     title: '李述铜的知识课堂',
     description: '这是我的知识课堂',
   
+    plugins: [
+      baiduAnalyticsPlugin({
+        id: "8b216b9d86cfdede077193159d7c0c22",
+      }),
+    ],
+
     theme: plumeTheme({
       logo: '/logo.png',      // logo
       footer: { copyright: 'Copyright © 2023-present lishutong' },
+      hostname: 'https://www.lishutong1024.cn/',
       plugins: {
         // 启用pdf阅读
         markdownPower: {
@@ -157,6 +165,7 @@ export default defineUserConfig({
       // 导航条
       navbar: [
         { text: '首页', link: '/', icon: 'material-symbols:home-outline' },
+        /*
         { 
           text: '课程介绍', 
           icon: 'material-symbols:home-outline',
@@ -238,6 +247,8 @@ export default defineUserConfig({
             },            
           ]          
         },
+                */
+
         { 
           text: '技术文档', 
           icon: 'material-symbols:home-outline',
