@@ -5,8 +5,8 @@ import { baiduAnalyticsPlugin } from '@vuepress/plugin-baidu-analytics'
 
 export default defineUserConfig({
     lang: 'zh-CN',
-    title: '李述铜的知识课堂',
-    description: '这是我的知识课堂',
+    title: '李述铜1024',
+    description: '专注计算机底层与嵌入式开发相关课程和技术内容的介绍',
   
     plugins: [
       baiduAnalyticsPlugin({
