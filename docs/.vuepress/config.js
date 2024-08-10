@@ -6,7 +6,7 @@ import { baiduAnalyticsPlugin } from '@vuepress/plugin-baidu-analytics'
 export default defineUserConfig({
     lang: 'zh-CN',
     title: '李述铜1024',
-    description: '专注计算机底层与嵌入式开发相关课程和技术内容的介绍',
+    description: '专注计算机底层与嵌入式开发相关知识的分享，提供相应的基础类课程，让你以不一样的视角更深入地学习相关知识，提升开发水平',
   
     plugins: [
       baiduAnalyticsPlugin({
