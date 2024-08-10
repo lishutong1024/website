@@ -2,6 +2,7 @@ import { defineUserConfig } from 'vuepress'
 import { viteBundler } from '@vuepress/bundler-vite'
 import { plumeTheme } from 'vuepress-theme-plume'
 import { baiduAnalyticsPlugin } from '@vuepress/plugin-baidu-analytics'
+import { alertPlugin } from "vuepress-plugin-alert"
 
 export default defineUserConfig({
     lang: 'zh-CN',
@@ -10,8 +11,32 @@ export default defineUserConfig({
     head: [['meta', { name: 'baidu-site-verification', content: 'codeva-y4YVaKcM8p' }]],
 
     plugins: [
+/*
+      ['@vuepress-reco/vuepress-plugin-bulletin-popover', {
+        width: '800px', // 默认 260px
+        title: '消息提示',
+        body: [
+          {
+            type: 'title',
+            content: '添加冴羽好友入前端交流群',
+            style: 'text-aligin: center;'
+          },
+          {
+            type: 'image',
+            src: 'https://cdn.jsdelivr.net/gh/mqyqingfeng/picture/IMG_3516.JPG'
+          }
+        ],
+        footer: [
+          {
+            type: 'button',
+            text: '打赏',
+            link: '/donate'
+          } 
+        ]
+      }],*/
+
       baiduAnalyticsPlugin({
-        id: "0ec0df4a6adf20a6a93079b1a41f0816",
+        id: "0ec0df4a6adf20a6a93079b1a41f0816", 
       }),
     ],
 
@@ -62,12 +87,15 @@ export default defineUserConfig({
             link: '/tech/',
             sidebar: [
               {
+                text: '资料下载',
+                link: 'fatfs/download.md', 
+              },
+              {
                 text: 'FATFS入门指南',
                 collapsed: true,
                 icon: 'mdi:language-typescript', // 侧边栏图标
                 items: [
                   'fatfs/use/intro.md', 
-                  'fatfs/download.md', 
                   {
                     text: '基本概念与原理',
                     collapsed: true,
@@ -125,7 +153,6 @@ export default defineUserConfig({
                 collapsed: true,
                 items: [
                   'fatfs/port/intro.md', 
-                  'fatfs/download.md', 
                   {
                     text: '基本概念与原理',
                     collapsed: true,
@@ -152,7 +179,6 @@ export default defineUserConfig({
                 collapsed: true,
                 items: [
                   'fatfs/code/intro.md', 
-                  'fatfs/download.md', 
                   'fatfs/code/mount.md', 
 
                 ] 
