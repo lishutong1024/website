@@ -6,7 +6,7 @@ import { baiduAnalyticsPlugin } from '@vuepress/plugin-baidu-analytics'
 export default defineUserConfig({
     lang: 'zh-CN',
     title: '李述铜的知识课堂',
-    description: '注计算机底层与嵌入式开发相关知识的分享，提供操作系统/TCPIP/文件系统等相关课程。由浅让你以不一样的视角更深入地学习相关知识，提升开发水平。',
+    description: '李述铜的知识课堂（lishutong1024.cn），专注于技术文档分享与知识传播。涵盖嵌入式领域的 FATFS 使用详解等专业内容，还有优秀书籍推荐及丰富的学习资源。深入浅出介绍底层原理和细节，助你提升技术认知，开启硬核学习之旅',
   
     plugins: [
       baiduAnalyticsPlugin({
