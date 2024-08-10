@@ -17,7 +17,7 @@ permalink: /tech/j8dwrlov/
 ## 主要内容
 当我们在Windows加载磁盘时，会看到除了盘符以外，每个磁盘还有个名称，如Windows、Data、Disk A、Disk B。这些具体的名称值，就是所谓的卷标。
 
-![alt text](../../../../../.vuepress/public/image/docs/notes/tech/fatfs/use/c4/getlabel/image.png)
+![alt 卷标示意图](../../../../../.vuepress/public/image/docs/notes/tech/fatfs/use/c4/getlabel/image.png)
 
 FATFS允许对这些卷标名称进行修改，也支持获取名称。不过，这些功能似乎用得很少，所以简单了解即可。
 

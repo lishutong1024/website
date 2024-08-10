@@ -21,7 +21,7 @@ permalink: /tech/espov3f0/
 
 而如果这个簇链中的所有簇都在一起连续存放，那么读写就不需要跳转，直接连续存储即可，从而大大提高存储器的读写速率。
 
-![alt text](../../../../../.vuepress/public/image/docs/notes/tech/fatfs/use/c2/alloc/image.png)
+![alt 簇存储示意图](../../../../../.vuepress/public/image/docs/notes/tech/fatfs/use/c2/alloc/image.png)
 
 由此可见，采用连续存储可进一步提升文件读写速度。
 

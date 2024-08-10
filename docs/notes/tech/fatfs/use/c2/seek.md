@@ -78,4 +78,4 @@ res = f_rewind(fp)
 ## 超出文件大小
 在写模式下，有可能出现超出文件大小的偏移量，即文件大小只有100字节，但是f_lseek()控制指针的位置要移动到200字节。显然，此时就超出了已有文件的大小。此时，指针位置的移动仍然能进行，在f_lseek()内部会主动扩充文件的大小，增加到200字节。至于扩充的数据是什么，则是未定义的。
 
-![alt text](../../../../../.vuepress/public/image/docs/notes/tech/fatfs/use/c2/seek/image.png)
+![alt 超出文件大小的问题](../../../../../.vuepress/public/image/docs/notes/tech/fatfs/use/c2/seek/image.png)

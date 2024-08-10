@@ -21,11 +21,11 @@ FATFS所有课程的资料均包含在下列的链接和文档中，不再单独
 
 注意：在运行use目录下的示例工程（除start工程之外的其它工程，如c00.02），可能会提示错误。
 
-![alt text](../../../.vuepress/public/image/docs/notes/tech/fatfs/download/image.png)
+![alt Visualcode扫描结果](../../../.vuepress/public/image/docs/notes/tech/fatfs/download/image.png)
 
 主要原因在于课程中使用了磁盘映像文件，由于文件太大，无法在每个工程下都放一份。所以，这些文件只留了一份，所以在运行这些工程时，请先将image目录拷贝到工程目录下（如下图，将image拷贝到c00.02）
 
-![alt text](../../../.vuepress/public/image/docs/notes/tech/fatfs/download/image-1.png)
+![alt 工程列表](../../../.vuepress/public/image/docs/notes/tech/fatfs/download/image-1.png)
 
 ## 参考资料
 在开发此课程中，主要参考了FATFS官网的链接：[http://elm-chan.org/fsw/ff/00index_e.html](http://elm-chan.org/fsw/ff/00index_e.html)

@@ -18,18 +18,18 @@ permalink: /tech/580etiwn/
 
 在多任务运行的环境中，很容易面临的一个问题是资源竞争：当多个任务同时读写一个共享的数据、设备时，很容易发生冲突的情况。例如：两个任务同时对一个全局变量counter进行访问，由于任务运行时序的问题，会导致counter的值在读写过程中出现数据被覆盖的情况，使得最终counter的不符合设计预期。
 
-![alt text](../../../../../.vuepress/public/image/docs/notes/tech/fatfs/port/c2/gdb32_rtos/image.png)
+![alt 互斥问题](../../../../../.vuepress/public/image/docs/notes/tech/fatfs/port/c2/gdb32_rtos/image.png)
 
 所以，多任务环境下操作共享资源时，我们需要借助RTOS中的一些任务间资源互斥的机制，如锁、互斥信号量等。其原理是在任务访问某个共享资源之前，需要先拿到锁。一旦拿到锁之后，其它任务将无法获得该锁，只能等持有锁的任务完成资源访问并释放锁之后，才能访问资源。
 
-![alt text](../../../../../.vuepress/public/image/docs/notes/tech/fatfs/port/c2/gdb32_rtos/image-1.png)
+![alt 用锁解决互斥问题](../../../../../.vuepress/public/image/docs/notes/tech/fatfs/port/c2/gdb32_rtos/image-1.png)
 
 ### FATFS中的资源访问问题
 类似地，在多任务环境下，对设备的读写也存在着冲突的问题。主要表现在两点：
 
 第一、当A任务在对设备进行读写操作时，可能B任务突然会打断这个过程对设备进行读写，此时会导致整个设备的读写时序混乱。例如，在下图中，当A任务对W25Q64进行写操作时，刚刚发送了命令0x2；此时，B打断了A，也进行写，同样发送了0x02命令。那么就会导致W25Q64连续两次收到命令0x02，写时序就完全混乱了。
 
-![alt text](../../../../../.vuepress/public/image/docs/notes/tech/fatfs/port/c2/gdb32_rtos/image-2.png)
+![alt SPI写时序图](../../../../../.vuepress/public/image/docs/notes/tech/fatfs/port/c2/gdb32_rtos/image-2.png)
 
 第二、FATFS内部数据需要在多任务环境下进行保护，以避免冲突。如下代码所示，在使用某个存储设备之前，需要先进行挂载，在f_mount函数中需要传入一个FATFS结构的指针。后续所有对该设备上的文件进行创建、读写操作时，FATFS在内部都会用到该FATFS结构，用于设备扇区数据的缓存，属性数据的存储。
 ```rust
@@ -94,7 +94,7 @@ typedef struct {
 
 这样一来，当任务需要访问某个设备上的文件时，需要先获取锁，拿到锁之后再进行访问。
 
-![alt text](../../../../../.vuepress/public/image/docs/notes/tech/fatfs/port/c2/gdb32_rtos/image-3.png)
+![alt 用锁解决资源访问问题](../../../../../.vuepress/public/image/docs/notes/tech/fatfs/port/c2/gdb32_rtos/image-3.png)
 
 ## 移植步骤
 在FATFS中的ffsystem.c中提供了现成的移植代码。在使用时，先将FF_FS_REENTRANT设置成1，以开启多任务访问的支持。在文件中，与多任务访问相关的代码主要是互斥信号量（mutex)的创建、删除、上锁、解锁这四个接口的实现。

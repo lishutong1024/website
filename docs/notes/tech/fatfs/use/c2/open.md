@@ -122,7 +122,7 @@ FRESULT f_close (
 ## f_open中的路径值
 注意到，f_open()需要传入待打开的文件路径。这个路径形式与我们在Windows上访问磁盘文件路径类似，在Windows上，我们会采用类似如下的路径来引用文件或目录。
 
-![alt text](../../../../../.vuepress/public/image/docs/notes/tech/fatfs/use/c2/open/image.png)
+![alt 打开路径](../../../../../.vuepress/public/image/docs/notes/tech/fatfs/use/c2/open/image.png)
 
 在FATFS也是类似的，只不过它不采用字母的盘符，而是采用数字盘符，具体形式如下：
 ```c

@@ -24,7 +24,7 @@ permalink: /tech/k7el8d41/
 
 这个应用程序运行时会涉及到文件的读写功能，但是它并不是直接访问物理硬盘上的文件，而是访问硬盘镜像中的文件。在本次移植中，使用了两个硬盘镜像。
 
-![alt text](../../../../../.vuepress/public/image/docs/notes/tech/fatfs/port/c2/visualstudio/image.png)
+![alt 整体结构](../../../../../.vuepress/public/image/docs/notes/tech/fatfs/port/c2/visualstudio/image.png)
 
 硬盘镜像实际上就是普通的文件，只不过里面存放的数据有些特别，它包含了一个存储设备（如硬盘、SSD、USB驱动器等）的完整数据复制。比如，有一块物理硬盘，那么我们可以将该硬盘的全部内容读取出来存储到一个文件中，那么此时就得到了硬盘镜像文件。
 
@@ -39,23 +39,23 @@ permalink: /tech/k7el8d41/
 
 在Windows的磁盘管理工具中，可以创建vhd格式的硬盘映像文件，如下所示。
 
-![alt text](../../../../../.vuepress/public/image/docs/notes/tech/fatfs/port/c2/visualstudio/image-1.png)
+![alt 创建硬盘映像1](../../../../../.vuepress/public/image/docs/notes/tech/fatfs/port/c2/visualstudio/image-1.png)
 
 选择好文件存放的路径，硬盘的大小、VHD格式且固定大小分配即可。
 
-![alt text](../../../../../.vuepress/public/image/docs/notes/tech/fatfs/port/c2/visualstudio/image-2.png)
+![alt 创建硬盘映像12](../../../../../.vuepress/public/image/docs/notes/tech/fatfs/port/c2/visualstudio/image-2.png)
 
 之后，对该硬盘进行初始化，也就是在硬盘上要创建分区表。
 
-![alt text](../../../../../.vuepress/public/image/docs/notes/tech/fatfs/port/c2/visualstudio/image-3.png)
+![alt 创建硬盘映像13](../../../../../.vuepress/public/image/docs/notes/tech/fatfs/port/c2/visualstudio/image-3.png)
 
 分区表选择MBR分区（注：视频中讲错了，FATFS目前支持GPT分区）。
 
-![alt text](../../../../../.vuepress/public/image/docs/notes/tech/fatfs/port/c2/visualstudio/image-4.png)
+![alt 创建硬盘映像14](../../../../../.vuepress/public/image/docs/notes/tech/fatfs/port/c2/visualstudio/image-4.png)
 
 初始化完成之后，就可以在磁盘上进行分区的创建了。在创建分区时，需要选择FATFS支持的FAT或FAT32格式的文件系统，不要选择NTFS（FATFS不支持）。
 
-![alt text](../../../../../.vuepress/public/image/docs/notes/tech/fatfs/port/c2/visualstudio/image-5.png)
+![alt 创建硬盘映像15](../../../../../.vuepress/public/image/docs/notes/tech/fatfs/port/c2/visualstudio/image-5.png)
 
 通过上述操作，我们就得到了可以被FATFS读写的磁盘映像。
 
@@ -65,7 +65,7 @@ permalink: /tech/k7el8d41/
 主要原因在于Windows的SDK开发包中自带了TCHAR的定义，因此为了避免使用自带的定义，添加了宏
 _TCHAR_DEFINED，具体如下图所示。
 
-![alt text](../../../../../.vuepress/public/image/docs/notes/tech/fatfs/port/c2/visualstudio/image-6.png)
+![alt 创建工程](../../../../../.vuepress/public/image/docs/notes/tech/fatfs/port/c2/visualstudio/image-6.png)
 
 工程创建完成后，编译即可得到一个普通的控制台应用程序。后期可以将FATFS源码集成进去，实现对前面创建的硬盘映像文件的读写。
 
@@ -126,7 +126,7 @@ DSTATUS disk_initialize (
 ### 读取接口
 由于磁盘映像文件是磁盘数据空间的完整拷贝，因此可以认为磁盘映像文件由连续的多个数据块（也叫扇区）组成，数据块的大小和磁盘的大小相同。
 
-![alt text](../../../../../.vuepress/public/image/docs/notes/tech/fatfs/port/c2/visualstudio/image-7.png)
+![alt 块列表](../../../../../.vuepress/public/image/docs/notes/tech/fatfs/port/c2/visualstudio/image-7.png)
 
 > 当然，对磁盘映像文件由于本身是一个普通的文件；所以，它是支持从任意位置开始读取。但是，在这里我们是将其作为磁盘上完整的拷贝，因此，对其读写的处理，也要按照和真正磁盘的一样，以块为单位进行读写。
 > 磁盘块的大小，一般为512字节。

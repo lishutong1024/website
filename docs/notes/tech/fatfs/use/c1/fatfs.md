@@ -41,16 +41,16 @@ FATFS具备以下特点：
 在FATFS官网给出了不同处理器下的编译结果供参考。其中V代表挂载的卷的数量，F代表打开的文件数量。
 具体到我们自己所用的处理器上，存储器的占用空间大小，取决于所用的编译器和FATFS配置参数。
 
-![alt text](../../../../../.vuepress/public/image/docs/notes/tech/fatfs/use/c1/fatfs/image.png)
+![alt FATFS占用情况](../../../../../.vuepress/public/image/docs/notes/tech/fatfs/use/c1/fatfs/image.png)
 
 FATFS的主要功能以函数方式提供，其设计较简单。为了能较大幅度裁剪以节省存储空间，很多函数都可以用宏来控制是否打开。
 
-![alt text](../../../../../.vuepress/public/image/docs/notes/tech/fatfs/use/c1/fatfs/image-1.png)
+![alt 函数配置宏](../../../../../.vuepress/public/image/docs/notes/tech/fatfs/use/c1/fatfs/image-1.png)
 
 ## 具体应用
 在具体项目中，我们可以将其移植到MCU上，并结合RTOS，从而直接像在Windows系统上那样用相应的文件读写接口open/write/read函数来读写SD卡的文件。
 
-![alt text](../../../../../.vuepress/public/image/docs/notes/tech/fatfs/use/c1/fatfs/image-2.png)
+![alt 具体应用](../../../../../.vuepress/public/image/docs/notes/tech/fatfs/use/c1/fatfs/image-2.png)
 
 其中RTOS并不是必须的，也可以直接在祼机上跑FATFS。
 ## 官网链接

@@ -29,7 +29,7 @@ permalink: /tech/ldvon6g2/
 
 具体流程和文件读取流程类似，如下图所示。
 
-![alt text](../../../../../.vuepress/public/image/docs/notes/tech/fatfs/use/c3/list/image.png)
+![alt 读取流程](../../../../../.vuepress/public/image/docs/notes/tech/fatfs/use/c3/list/image.png)
 
 ## 接口介绍
 ### 打开目录f_opendir

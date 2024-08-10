@@ -29,7 +29,7 @@ permalink: /tech/u80e7jgh/
 ## 硬件连接
 如下图所示，梁山派开发板板载了一个TF卡插槽，可以插入一个小的TF卡。GD32F470通过SD接口连接卡，共使用了6根信号线：CLK、CMD、D0-D3。
 
-![alt text](../../../../../.vuepress/public/image/docs/notes/tech/fatfs/port/c2/gdb32_sdcard/image.png)
+![alt SD卡硬件连接](../../../../../.vuepress/public/image/docs/notes/tech/fatfs/port/c2/gdb32_sdcard/image.png)
 
 SD卡本身支持SD接口和SPI接口，由硬件连接可知，其设计采用的是SD接口，并且使用四根信号号进行数据传输。
 ## 实现原理
@@ -38,7 +38,7 @@ SD卡相比W25Q64这种SPI Flash在读写逻辑上要简单很多，没有复杂
 
 因此，在我们看来，SD卡就是由大量连续的数据块组成，数据块的大小固定为512字节。
 
-![alt text](../../../../../.vuepress/public/image/docs/notes/tech/fatfs/port/c2/gdb32_sdcard/image-1.png)
+![alt 块列表](../../../../../.vuepress/public/image/docs/notes/tech/fatfs/port/c2/gdb32_sdcard/image-1.png)
 
 因此，在进行移植时，只需要参考[移植到Visual Studio](visualstudio.md)中的方法，实现SD卡的初始化、块读取和块擦除这些基本的功能即可。
 
@@ -176,7 +176,7 @@ SD卡的驱动可以使用如下两种方式：
 #### 结构
 以24 mm x 32 mm x 2.1 mm尺寸的SD卡为例，其引脚排列如下：
 
-![alt text](../../../../../.vuepress/public/image/docs/notes/tech/fatfs/port/c2/gdb32_sdcard/image-2.png)
+![alt SD引脚](../../../../../.vuepress/public/image/docs/notes/tech/fatfs/port/c2/gdb32_sdcard/image-2.png)
 
 - 1号引脚：CD/DAT3（Card Detect）：卡检测线，用于检测卡是否插入，或数据线3，用于双向数据传输。
 - 2号引脚：CMD（Command Line）：命令线，用于向卡发送命令。
@@ -189,7 +189,7 @@ SD卡的驱动可以使用如下两种方式：
 - 9号引脚：DAT2（Data Line 2）：数据线2，用于双向数据传输。
 
 
-![alt text](../../../../../.vuepress/public/image/docs/notes/tech/fatfs/port/c2/gdb32_sdcard/image-3.png)
+![alt 结构图](../../../../../.vuepress/public/image/docs/notes/tech/fatfs/port/c2/gdb32_sdcard/image-3.png)
 
 - 控制器：负责管理数据的读取、写入、擦除和管理存储空间等功能，以及处理与主机设备（如相机、手机）之间的通信。
 - 存储区域：主要存储介质，用于存储数据，通常分为扇区（Sector），每个扇区存储一定量的数据。
@@ -206,7 +206,7 @@ SD卡的驱动可以使用如下两种方式：
 ### 工作模式
 在我们进行SD卡操作时，需要注意，SD卡有两种工作模式。在进行SD驱动代码阅读时，如果对这个模式有所了解，那么将有助于理解驱动代码。两种模式如下所示：
 
-![alt text](../../../../../.vuepress/public/image/docs/notes/tech/fatfs/port/c2/gdb32_sdcard/image-4.png)
+![alt 工作模式](../../../../../.vuepress/public/image/docs/notes/tech/fatfs/port/c2/gdb32_sdcard/image-4.png)
 
 - 卡识别模式：复位后将处理此模式，用于识别SD卡的类型
 - 数据传输模式：用于进入具体的数据传输
@@ -214,7 +214,7 @@ SD卡的驱动可以使用如下两种方式：
 ### 上电与时钟要求
 主机应向卡供电，以便在250 ms内达到最小电压，并开始向SD卡提供至少74个SD时钟，同时保持CMD线为高电平。
 
-![alt text](../../../../../.vuepress/public/image/docs/notes/tech/fatfs/port/c2/gdb32_sdcard/image-5.png)
+![alt 上电过程](../../../../../.vuepress/public/image/docs/notes/tech/fatfs/port/c2/gdb32_sdcard/image-5.png)
 
 上电后，主机需要持续在 sdclk 上发送时钟，频率在范围 100kHz~400kHz 内 (卡初始化阶段要求的时钟频率) 。在图20的流程走完之前都不能提高到 25MHz 。
 
@@ -222,11 +222,11 @@ SD卡的驱动可以使用如下两种方式：
 <summary>逻辑分析仪抓取的时钟图</summary>
 以下是用逻辑分析仪抓取的开发板上，CMD0命令传输的时序图。可以看到，采用到的频率为400KHz。
 
-![alt text](../../../../../.vuepress/public/image/docs/notes/tech/fatfs/port/c2/gdb32_sdcard/image-6.png)
+![alt 时序图](../../../../../.vuepress/public/image/docs/notes/tech/fatfs/port/c2/gdb32_sdcard/image-6.png)
 
 当初始化完成之后，时钟频率进行了切换，这里切换到了12.5MHz。
 
-![alt text](../../../../../.vuepress/public/image/docs/notes/tech/fatfs/port/c2/gdb32_sdcard/image-7.png)
+![alt 时钟切换时序图](../../../../../.vuepress/public/image/docs/notes/tech/fatfs/port/c2/gdb32_sdcard/image-7.png)
 
 </details>
 
@@ -235,18 +235,18 @@ SD有两种不同的速度模式，可通过CMD6命令，从默认的缺省模�
 
 两种速度模式，第一种是25MHz，可达到12.5MB/s传输速度。
 
-![alt text](../../../../../.vuepress/public/image/docs/notes/tech/fatfs/port/c2/gdb32_sdcard/image-8.png)
+![alt 速度时序](../../../../../.vuepress/public/image/docs/notes/tech/fatfs/port/c2/gdb32_sdcard/image-8.png)
 
 第二种是50MHz，可达到25MB/s传输速度。
 
-![alt text](../../../../../.vuepress/public/image/docs/notes/tech/fatfs/port/c2/gdb32_sdcard/image-9.png)
+![alt 切换后的时序](../../../../../.vuepress/public/image/docs/notes/tech/fatfs/port/c2/gdb32_sdcard/image-9.png)
 
 ### 卡识别模式
 在卡识别模式下，主机主要重置（reset）所有处于卡识别模式的卡，验证工作电压范围，识别卡并要求它们发布RCA地址。此操作在每张卡上的CMD线进行。完整操作状态切换图如下所示。
 
 一般我们会在很多SD卡的驱动代码中看到对这个流程图中工作流程的实现，本课程中采用的GD官方SD驱动同样如此。
 
-![alt text](../../../../../.vuepress/public/image/docs/notes/tech/fatfs/port/c2/gdb32_sdcard/image-10.png)
+![alt 识别模式状态机](../../../../../.vuepress/public/image/docs/notes/tech/fatfs/port/c2/gdb32_sdcard/image-10.png)
 
 具体的流程和命令如下：
 
@@ -274,16 +274,16 @@ CMD8命令详解CMD8是SD卡中的一条命令，通常用于SD卡的初始化�
 
 需要注意的是，不是所有的SD卡都支持CMD8命令，只有符合SD卡规范版本2.0及以上的卡才会支持该命令。如果SD卡不支持CMD8命令，主机可以根据卡的响应来确定是否继续使用其他命令进行初始化和识别。
 
-![alt text](../../../../../.vuepress/public/image/docs/notes/tech/fatfs/port/c2/gdb32_sdcard/image-11.png)
+![alt CMD8命令](../../../../../.vuepress/public/image/docs/notes/tech/fatfs/port/c2/gdb32_sdcard/image-11.png)
 </details>
 
 之后，需要发送SD_SEND_OP_COND（ACMD 41)，ACMD41是SD卡命令集中的一条应用命令（Application Command），用于初始化SD卡并查询其操作条件。ACMD41通常需要通过CMD55命令激活（即发送CMD55命令后才能发送ACMD41命令）。其主要作用如下：
 <details>
 <summary>ACMD41命令</summary>
 
-![alt text](../../../../../.vuepress/public/image/docs/notes/tech/fatfs/port/c2/gdb32_sdcard/image-12.png)
+![alt ACMD41命令介绍](../../../../../.vuepress/public/image/docs/notes/tech/fatfs/port/c2/gdb32_sdcard/image-12.png)
 
-![alt text](../../../../../.vuepress/public/image/docs/notes/tech/fatfs/port/c2/gdb32_sdcard/image-13.png)
+![alt ACMD41命令](../../../../../.vuepress/public/image/docs/notes/tech/fatfs/port/c2/gdb32_sdcard/image-13.png)
 </details>
 
 ACMD41处理完毕后，SD卡从idle状态，切换进入ready状态。并能可识别子网三种类型的卡。
@@ -292,11 +292,11 @@ ACMD41处理完毕后，SD卡从idle状态，切换进入ready状态。并能可
 <details>
 <summary>CMD2命令</summary>
 
-![alt text](../../../../../.vuepress/public/image/docs/notes/tech/fatfs/port/c2/gdb32_sdcard/image-14.png)
+![alt CMD2命令介绍一](../../../../../.vuepress/public/image/docs/notes/tech/fatfs/port/c2/gdb32_sdcard/image-14.png)
 
-![alt text](../../../../../.vuepress/public/image/docs/notes/tech/fatfs/port/c2/gdb32_sdcard/image-15.png)
+![alt CMD2命令介绍二](../../../../../.vuepress/public/image/docs/notes/tech/fatfs/port/c2/gdb32_sdcard/image-15.png)
 
-![alt text](../../../../../.vuepress/public/image/docs/notes/tech/fatfs/port/c2/gdb32_sdcard/image-16.png)
+![alt CMD2命令介绍三](../../../../../.vuepress/public/image/docs/notes/tech/fatfs/port/c2/gdb32_sdcard/image-16.png)
 </details>
 
 最后， 发送CMD3命令，该命令用于获取SD卡的相对地址（Relative Card Address，RCA）。RCA是一个16位的地址，用于标识SD卡在总线上的位置，从而在多卡环境下区分不同的SD卡。
@@ -304,7 +304,7 @@ ACMD41处理完毕后，SD卡从idle状态，切换进入ready状态。并能可
 <details>
 <summary>CMD3命令</summary>
 
-![alt text](../../../../../.vuepress/public/image/docs/notes/tech/fatfs/port/c2/gdb32_sdcard/image-17.png)
+![alt CMD3命令](../../../../../.vuepress/public/image/docs/notes/tech/fatfs/port/c2/gdb32_sdcard/image-17.png)
 
 </details>
 
@@ -318,14 +318,14 @@ CMD9是SD卡命令集中的一条命令，用于获取SD卡的CSD（Card Specifi
 3. **速度等级**：CSD寄存器中还包含了SD卡的速度等级信息，可以帮助主机选择合适的时钟频率和数据传输速率。
 4. **写保护状态**：CSD寄存器中包含了SD卡的写保护状态信息，可以告诉主机是否可以对SD卡进行写操作。
 
-![alt text](../../../../../.vuepress/public/image/docs/notes/tech/fatfs/port/c2/gdb32_sdcard/image-18.png)
-![alt text](../../../../../.vuepress/public/image/docs/notes/tech/fatfs/port/c2/gdb32_sdcard/image-19.png)
+![alt CMD9命令一](../../../../../.vuepress/public/image/docs/notes/tech/fatfs/port/c2/gdb32_sdcard/image-18.png)
+![alt CMD9命令二](../../../../../.vuepress/public/image/docs/notes/tech/fatfs/port/c2/gdb32_sdcard/image-19.png)
 </details>
 
 
 ### 数据传输模式
 当执行完CMD3命令后，SD卡进入数据传输模式，之后就可以进行SD卡的数据读取。
-![alt text](../../../../../.vuepress/public/image/docs/notes/tech/fatfs/port/c2/gdb32_sdcard/image-20.png)
+![alt CM3命令](../../../../../.vuepress/public/image/docs/notes/tech/fatfs/port/c2/gdb32_sdcard/image-20.png)
 
 ### 命令格式
 SD命令格式如下所示：
@@ -337,57 +337,57 @@ SD命令格式如下所示：
 - CRC：用于数据校验的CRC计算结果
 - 结束位：结束位是一个高电平信号，用于指示命令传输的结束。
 
-![alt text](../../../../../.vuepress/public/image/docs/notes/tech/fatfs/port/c2/gdb32_sdcard/image-21.png)
+![alt SD卡命令格式](../../../../../.vuepress/public/image/docs/notes/tech/fatfs/port/c2/gdb32_sdcard/image-21.png)
 
 常见的不带数据的命令包含两种：有响应和无响应的命令，其通信过程如下：
 
-![alt text](../../../../../.vuepress/public/image/docs/notes/tech/fatfs/port/c2/gdb32_sdcard/image-22.png)
+![alt 不带数据的命令](../../../../../.vuepress/public/image/docs/notes/tech/fatfs/port/c2/gdb32_sdcard/image-22.png)
 
 <details>
 <summary>以下是用逻辑分析仪抓取的时序波形</summary>
 如下图所示，CMD0为无响应的命令，CMD8为有响应的命令
 
-![alt text](../../../../../.vuepress/public/image/docs/notes/tech/fatfs/port/c2/gdb32_sdcard/image-23.png)
+![alt 有无响应过程](../../../../../.vuepress/public/image/docs/notes/tech/fatfs/port/c2/gdb32_sdcard/image-23.png)
 
 </details>
 
 ### 块读取命令
 如果要进行数据块的读取，首先要发送数据读取命令（例如CMD18(READ_MULTIPLE_BLOCK)），然后等待卡的响应，之前就可以逐个块的读取数据。读取完毕之后，再发送结束传输的命令（如CMD12(STOP_TRANSMISSION)）来终止读取过程。（下面给出了多块读取SD卡的时序图）
 
-![alt text](../../../../../.vuepress/public/image/docs/notes/tech/fatfs/port/c2/gdb32_sdcard/image-24.png)
+![alt 读块操作](../../../../../.vuepress/public/image/docs/notes/tech/fatfs/port/c2/gdb32_sdcard/image-24.png)
 
 其中CMD18命令格式如下：
 
-![alt text](../../../../../.vuepress/public/image/docs/notes/tech/fatfs/port/c2/gdb32_sdcard/image-25.png)
+![alt CMD18命令](../../../../../.vuepress/public/image/docs/notes/tech/fatfs/port/c2/gdb32_sdcard/image-25.png)
 
 其接受的是R1类型的响应，该响应格式如下：
-![alt text](../../../../../.vuepress/public/image/docs/notes/tech/fatfs/port/c2/gdb32_sdcard/image-26.png)
+![alt R1类型响应](../../../../../.vuepress/public/image/docs/notes/tech/fatfs/port/c2/gdb32_sdcard/image-26.png)
 
 结束传输的命令CMD12命令格式如下，其接受R1b格式的响应。该响应与R1相同，不过后面还带了忙等响应传输，用于通知需要主机需要等待数据就绪才能读取。
 
-![alt text](../../../../../.vuepress/public/image/docs/notes/tech/fatfs/port/c2/gdb32_sdcard/image-27.png)
+![alt CMD12命令](../../../../../.vuepress/public/image/docs/notes/tech/fatfs/port/c2/gdb32_sdcard/image-27.png)
 
 ### 块写入命令
 数据块的写入和读取流程差不多。以连续多块写为例，首先发送CMD25(WRITE_MULTIPLE_BLOCK)命令，接下来依次发送各个要写入的块，最后发送CMD12(STOP_TRANSMISSION)结束数据传输。
 
-![alt text](../../../../../.vuepress/public/image/docs/notes/tech/fatfs/port/c2/gdb32_sdcard/image-28.png)
+![alt 块写入过程](../../../../../.vuepress/public/image/docs/notes/tech/fatfs/port/c2/gdb32_sdcard/image-28.png)
 
-![alt text](../../../../../.vuepress/public/image/docs/notes/tech/fatfs/port/c2/gdb32_sdcard/image-29.png)
+![alt CMD24命令](../../../../../.vuepress/public/image/docs/notes/tech/fatfs/port/c2/gdb32_sdcard/image-29.png)
 
 <details>
 <summary>逻辑分析仪抓取波形图</summary>
 
-![alt text](../../../../../.vuepress/public/image/docs/notes/tech/fatfs/port/c2/gdb32_sdcard/image-30.png)
+![alt 逻辑分析仪波形图1](../../../../../.vuepress/public/image/docs/notes/tech/fatfs/port/c2/gdb32_sdcard/image-30.png)
 
-![alt text](../../../../../.vuepress/public/image/docs/notes/tech/fatfs/port/c2/gdb32_sdcard/image-31.png)
+![alt 逻辑分析仪波形2](../../../../../.vuepress/public/image/docs/notes/tech/fatfs/port/c2/gdb32_sdcard/image-31.png)
 
-![alt text](../../../../../.vuepress/public/image/docs/notes/tech/fatfs/port/c2/gdb32_sdcard/image-32.png)
+![alt 逻辑分析仪波形图3](../../../../../.vuepress/public/image/docs/notes/tech/fatfs/port/c2/gdb32_sdcard/image-32.png)
 </details>
 
 ## 时序图
 为了方便部分同学理解SD卡的时序逻辑图，这里给出了课程所用的示例从启动开始的时序抓取结果。该文件可用梦源的逻辑分析仪软件DSView打开观察，软件下载地址：[https://dreamsourcelab.cn/download/](https://dreamsourcelab.cn/download/)
 
-![alt text](../../../../../.vuepress/public/image/docs/notes/tech/fatfs/port/c2/gdb32_sdcard/image-33.png)
+![alt 整体时序](../../../../../.vuepress/public/image/docs/notes/tech/fatfs/port/c2/gdb32_sdcard/image-33.png)
 
 波形文件：[波形文件](/other/fatfs/DSLogic%20PLus-la-240503-194905.dsl)（下载后解压用DSView打开）
 

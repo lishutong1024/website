@@ -15,11 +15,11 @@ permalink: /tech/2ddmidm7/
 ## 什么是移植
 嵌入式领域的最大一个特点就是平台非标准化，不同的产品中采用的硬件平台是千差万别的。
 
-![alt text](../../../../../.vuepress/public/image/docs/notes/tech/fatfs/port/c1/whatsport/image.png)
+![alt 开发板图](../../../../../.vuepress/public/image/docs/notes/tech/fatfs/port/c1/whatsport/image.png)
 
 比如，在有些产品中，可能采用了x86架构的CPU，有些产品采用的则是ARM架构的MCU。有一些产品对于数据的存储采用的是SD卡存储，而有些则采用的是SPI接口的Flash。因此，在很多时候，我们开发的与业务相关的代码至少在某些部分上和底层硬件相关的。
 
-![alt text](../../../../../.vuepress/public/image/docs/notes/tech/fatfs/port/c1/whatsport/image-1.png)
+![alt 存储结构图](../../../../../.vuepress/public/image/docs/notes/tech/fatfs/port/c1/whatsport/image-1.png)
 
 如下图所示，当我们将原先基于SD卡存储的工程代码迁移到新的硬件平台上时；由于此时底层采用了SPI Flash存储，因此，数据存储模块中将数据存储到硬件设备上的相关代码则需要重写，而上层的应用，由于其不直接操作硬件，而只是调用数据存储模块相关的代码，因此应用程序程序无需改动。
 
@@ -28,16 +28,16 @@ permalink: /tech/2ddmidm7/
 ## 移植FATFS
 在本系列课程的《FATFS基本入门指南》课程中，我们已经了解了FATFS的基本使用。通过课程可知，FATFS就是一个软件模块，它能够帮助我们去按FAT32等文件系列的规范要去读写存储设备上的文件，并提供一组文件相关API接口供开发者使用。基于这些API，我们可以开发出各种不同的应用程序。
 
-![alt text](../../../../../.vuepress/public/image/docs/notes/tech/fatfs/port/c1/whatsport/image-2.png)
+![alt FATFS应用结构](../../../../../.vuepress/public/image/docs/notes/tech/fatfs/port/c1/whatsport/image-2.png)
 
 
 显然，由于嵌入式平台中硬件设备非常多样，FATFS无法支持所有的硬件平台，因此在设计上，作者就考虑到了可移植性，将核心逻辑与硬件抽象层（HAL）分离，这意味着在不同的硬件平台上实现FATFS主要涉及到适配或实现这些硬件抽象层的接口。
 
-![alt text](../../../../../.vuepress/public/image/docs/notes/tech/fatfs/port/c1/whatsport/image-3.png)
+![alt FATFS软修护分层](../../../../../.vuepress/public/image/docs/notes/tech/fatfs/port/c1/whatsport/image-3.png)
 
 如上图所示，当我们从FATFS官网下载代码之后，就需要根据特定的嵌入式硬件平台，实现相应的存储设备控制驱动，并对FATFS相关配置进行修改，以使其适合新的硬件平台。
 
-![alt text](../../../../../.vuepress/public/image/docs/notes/tech/fatfs/port/c1/whatsport/image-4.png)
+![alt 移植步骤](../../../../../.vuepress/public/image/docs/notes/tech/fatfs/port/c1/whatsport/image-4.png)
 
 具体而言，我们需要做以下几部分工作：
 

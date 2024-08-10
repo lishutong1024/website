@@ -17,7 +17,7 @@ permalink: /tech/z1kpzixc/
 ## 应用场合
 在对文件进行操作的过程，可能出于某些原因需要对文件进行截断。此时可用到`f_truncate`函数来完成该截断功能。其效果如下图所示，该函数会在当前读写位置进行截断，即将文件后面数据全部丢弃，只保留前面部分。
 
-![alt text](../../../../../.vuepress/public/image/docs/notes/tech/fatfs/use/c2/trunc/image.png)
+![alt 应用场合](../../../../../.vuepress/public/image/docs/notes/tech/fatfs/use/c2/trunc/image.png)
 
 例如：
 

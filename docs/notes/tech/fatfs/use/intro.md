@@ -51,7 +51,7 @@ FATFS（File Allocation Table File System）是一个轻量级的文件系统，
 
 结合这门课程的特点，我发现完全不需要开发板，所有的内容均在PC机上完成。所以，你只需要一台电脑就可以学习了！
 
-![alt text](../../../../.vuepress/public/image/docs/notes/tech/fatfs/use/intro/image.png)
+![alt Visual界面](../../../../.vuepress/public/image/docs/notes/tech/fatfs/use/intro/image.png)
 
 视频中采用的是Windows + Visual Studio开发环境（VS2019）进行实验录制。**配套源码包中提供了Visual Studio 2019的工程，也提供基于CMake + VSCode的工程配置**。如果你采用的是其它类型的操作系统，可使用后者的工程。
 

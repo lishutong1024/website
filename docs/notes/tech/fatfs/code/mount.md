@@ -26,7 +26,7 @@ permalink: /tech/82wy63jy/
 ### 挂载过程
 试想一下，如果是我们来实现这个挂载过程，有哪些工作应该需要做呢？
 
-![alt text](../../../../.vuepress/public/image/docs/notes/tech/fatfs/code/mount/image.png)
+![alt 挂载过程](../../../../.vuepress/public/image/docs/notes/tech/fatfs/code/mount/image.png)
 
 1. 首先，必定要进行存储设备的初始化。只有进行了初始化之后，才可能对存储设备进行读写。
 2. 其次，需要识别存储设备上的分区排列，找到我们要挂载的那个分区。
@@ -93,14 +93,14 @@ static FATFS *FatFs[FF_VOLUMES];	/* Pointer to the filesystem objects (logical d
 
 所以，简而言之：**在FATFS中，f_mount的功能就是找到指定的分区号（设备号），然后定位到存储设备上的指定分区，再将其中的文件系统信息读取到某个FATFS结构体实例中，最后将该结构体实例的地址填入到FATFS的相应位置**。
 
-![alt text](../../../../.vuepress/public/image/docs/notes/tech/fatfs/code/mount/image-1.png)
+![alt FAT指针数组](../../../../.vuepress/public/image/docs/notes/tech/fatfs/code/mount/image-1.png)
 
 ## 挂载过程
 
-![alt text](../../../../.vuepress/public/image/docs/notes/tech/fatfs/code/mount/image-2.png)
+![alt 挂载过程](../../../../.vuepress/public/image/docs/notes/tech/fatfs/code/mount/image-2.png)
 
 ## 白板笔迹
-![alt text](../../../../.vuepress/public/image/docs/notes/tech/fatfs/code/mount/image-3.png)
+![alt 白板笔迹](../../../../.vuepress/public/image/docs/notes/tech/fatfs/code/mount/image-3.png)
 
 ## 补充资料
 * 硬盘分区表MBR：[https://blog.csdn.net/bingqingsuimeng/article/details/50585304](https://blog.csdn.net/bingqingsuimeng/article/details/50585304)

@@ -20,7 +20,7 @@ permalink: /tech/90h99ptx/
 
 例如，对于一个日志存储的软件模块，可能在系统初始化时打开存储日志的文件，然后在整个系统运行期间保持打开以便随时写入。由于FATFS为了写提高效率，可能会对写入的数据进行缓存，所以最后写入的日志数据在调用f_write()之后有可能不会立即写入到驱动器里，而是暂时写入到FIL对像中的内部缓存。如果中途发生断电、系统崩溃等情况；那么最后的文件数据，就会丢掉。
 
-![alt text](../../../../../.vuepress/public/image/docs/notes/tech/fatfs/use/c2/sync/image.png)
+![alt 应用场合](../../../../../.vuepress/public/image/docs/notes/tech/fatfs/use/c2/sync/image.png)
 
 因此，为了解决这个问题，可以在每次写入文件数据之后，使用f_sync()函数强制将缓存的数据也写入到驱动器里。
 

@@ -17,7 +17,7 @@ permalink: /tech/fer0oz0t/
 ## 应用场合
 在某些情况下，可能需要将文件中的数据读取出来，然后转发给其它设备。例如，将文件内容读取出来，通过串口或网络发送出去。或者，将文件内容读取出来，然后进行某种处理，再写到另一个文件中。
 
-![alt text](../../../../../.vuepress/public/image/docs/notes/tech/fatfs/use/c2/foword/image.png)
+![alt 应用场合](../../../../../.vuepress/public/image/docs/notes/tech/fatfs/use/c2/foword/image.png)
 
 对于以上情况，如果使用f_read()函数读取文件；那么，需要先配备一个缓存，将数据读取到缓存中，然后再进行处理。这样做在某些情况下存在一些弊端。
 
@@ -46,7 +46,7 @@ FRESULT f_forward (
 返回值：`FR_OK`（成功）、`FR_DISK_ERR`（磁盘错误）、`FR_INT_ERR`（内部错误）、`FR_INVALID_OBJECT`（无效的文件对象）、`FR_DENIED`（拒绝访问）和`FR_TIMEOUT`（超时）。
 
 该函数内部具体的执行流程如下图所示：
-![alt text](../../../../../.vuepress/public/image/docs/notes/tech/fatfs/use/c2/foword/image-1.png)
+![alt 执行流程](../../../../../.vuepress/public/image/docs/notes/tech/fatfs/use/c2/foword/image-1.png)
 
 其具体流程描述如下：
 - 每次转发之前，先调用fun()检查是否就绪（参数为0、0）。如果就绪，则func()应当返回1；否则返回0。
@@ -128,7 +128,7 @@ FRESULT play_file (
 ### 每次读取的字节量不固定
 实际测试发现，f_forward()对func()函数的次数，以及func()调用时的参数中字节量是不固定的。具体原因是什么呢？
 
-![alt text](../../../../../.vuepress/public/image/docs/notes/tech/fatfs/use/c2/foword/image-2.png)
+![alt 运行效果](../../../../../.vuepress/public/image/docs/notes/tech/fatfs/use/c2/foword/image-2.png)
 
 这是因为数据读取是放在FIL结构中，FATFS对FIL结构的缓存管理有其自己内在的处理逻辑。所以无法保证每次func()中获得的数据量是存储设备扇区大小或者簇的大小，并且无法保证读者的数据内容总是从扇区或簇起始地址开始读取的。
 

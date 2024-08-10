@@ -15,7 +15,7 @@ permalink: /tech/n7vdmeek/
 ## FATFS的文件
 当我们从官网上下载FATFS之后，解压之后的文件组织内容如下。可以看到，其文件数量比较少。
 
-![alt text](../../../../../.vuepress/public/image/docs/notes/tech/fatfs/port/c1/files/image.png)
+![alt 文件列表](../../../../../.vuepress/public/image/docs/notes/tech/fatfs/port/c1/files/image.png)
 
 这里我们主要关注相关的源文件：
 
@@ -29,12 +29,12 @@ permalink: /tech/n7vdmeek/
 
 这些文件中，相关之间的关系如下图所示。
 
-![alt text](../../../../../.vuepress/public/image/docs/notes/tech/fatfs/port/c1/files/image-1.png)
+![alt FATFS文件关系](../../../../../.vuepress/public/image/docs/notes/tech/fatfs/port/c1/files/image-1.png)
 
 其中，应用层通过调用ff.c中实现的f_oipen()等相关接口来进行文件访问操作，而ff.c中则调用具体的存储设备相关接口来对存储设备进行读写。具体的读写接口，可以在diskio.c中实现，也可以自行在其它文件中，如mm.c, spi.c中实现。
 在一些简单的应用，只需要使用一个存储设备，而在有些应用中可能需要支持多个存储设备的访问；对于这两中不同的需求，FATFS都能够支持。
 
-![alt text](../../../../../.vuepress/public/image/docs/notes/tech/fatfs/port/c1/files/image-2.png)
+![alt 系统结构图](../../../../../.vuepress/public/image/docs/notes/tech/fatfs/port/c1/files/image-2.png)
 
 ## 移植相关接口
 通过上述分析可知，为了完成这个移植操作，主要需要实现diskio.h相关的接口函数。通过这些实现接口函数，就可以实现将存储设备纳入FATFS管理中。如果还需要实现长文件名则需要使用ffunicode.c的代码；而如果要支持多任务并发使用FATFS，则需要进一步实现ffsystem.c中相关接口。

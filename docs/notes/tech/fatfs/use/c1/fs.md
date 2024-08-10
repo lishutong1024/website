@@ -20,7 +20,7 @@ permalink: /tech/5zlvcsn3/
 
 在这些场合中，数据的存储要求是比较简单的，大多只要求能够将数据存储起来就行。对具体的存储格式没有什么特定的要求，数据本身的结构也比较简单，对数据的修改也较为简单。所以，我们只需要编写简单的代码就能够完成这些要求。
 
-![alt text](../../../../../.vuepress/public/image/docs/notes/tech/fatfs/use/c1/fs/image-4.png)
+![alt 应用文件系统的场合](../../../../../.vuepress/public/image/docs/notes/tech/fatfs/use/c1/fs/image-4.png)
 
 但是在某些情况下，对数据存储有一定的要求，此时无论是片内MCU，还是EEPROM和Flash，满足不了需求。此时，需要使用文件系统。
 
@@ -28,7 +28,7 @@ permalink: /tech/5zlvcsn3/
 -  数据组织：文件系统提供了一种结构化的方式来组织数据，包括文件和目录。这有助于在设备上创建层次结构和分类数据，使其更易于理解和维护。 
 -  数据访问：文件系统提供了通用的数据访问接口，允许应用程序方便地读取和写入文件、随时增删文件。这使得开发嵌入式应用程序更加高效。 
 
-![alt text](../../../../../.vuepress/public/image/docs/notes/tech/fatfs/use/c1/fs/image-1.png)
+![alt 文件存储](../../../../../.vuepress/public/image/docs/notes/tech/fatfs/use/c1/fs/image-1.png)
 
 在这些复杂的场合中，我们就需要仔细设计数据如何在上面如何进行存储，数据的进行增删改查如何实现，然后根据需求设计相应的软件模块。这个过程，实际上就是设计一个自己的文件系统。
 ## 文件系统倒底是什么
@@ -36,11 +36,11 @@ permalink: /tech/5zlvcsn3/
 
 例如，在嵌入式系统中，如果需要将大量的数据存储到本地，可以使用到SD卡。由于没有文件系统，你就需要自己直接访问SD卡上的原始块数据。
 
-![alt text](../../../../../.vuepress/public/image/docs/notes/tech/fatfs/use/c1/fs/image-2.png)
+![alt SD卡](../../../../../.vuepress/public/image/docs/notes/tech/fatfs/use/c1/fs/image-2.png)
 
 如下所示，**SD卡在逻辑上一系列连续的存储块集合，以块为单位进行读取和写入**，每个块的大小通常为512字节。如果你只有20字节写入到指定的块中，则需要将数据所在的目的块内容读取出来，合并待写入的数据，最后再回写。不能直接只是将20字节写入到数据块中，这会导致该块中其它内部丢失。
 
-![alt text](../../../../../.vuepress/public/image/docs/notes/tech/fatfs/use/c1/fs/image-3.png)
+![alt 块列表](../../../../../.vuepress/public/image/docs/notes/tech/fatfs/use/c1/fs/image-3.png)
 
 另外，我们存储的数据往往是有不同的结构和含义的，比如日志、传感器采集结果。这些数据的具体格式、内容、大小完全不同，以及将来要对这些进行修改和删除。**为了能够方便对这些数据进行有效存储管理，因此，不能简单地直接按顺序存取，我们需要采取一定的数据组织方案。具体数据在存储设备上如何进行存储和管理，以及其具体实现相关的软件或数据结构，就是文件系统。**
 
