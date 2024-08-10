@@ -11,7 +11,7 @@ export default defineUserConfig({
 
     plugins: [
       baiduAnalyticsPlugin({
-        id: "8b216b9d86cfdede077193159d7c0c22",
+        id: "0ec0df4a6adf20a6a93079b1a41f0816",
       }),
     ],
 
