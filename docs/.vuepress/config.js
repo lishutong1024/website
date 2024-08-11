@@ -66,8 +66,8 @@ export default defineUserConfig({
                 icon: 'mdi:language-typescript', // 侧边栏图标
                 items: [
                   'core/diylinux', 
+                  'core/diytcpip',
                   'core/diyfat32', 
-                  'core/diytcpip'
                 ]
               },
               { 
