@@ -48,6 +48,7 @@ export default defineUserConfig({
         // 启用pdf阅读
         markdownPower: {
           pdf: true,
+          bilibili: true,
         },
       },
 
