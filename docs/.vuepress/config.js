@@ -192,7 +192,6 @@ export default defineUserConfig({
       // 导航条
       navbar: [
         { text: '首页', link: '/', icon: 'material-symbols:home-outline' },
-        /*
         { 
           text: '课程介绍', 
           icon: 'material-symbols:home-outline',
@@ -274,8 +273,6 @@ export default defineUserConfig({
             },            
           ]          
         },
-                */
-
         { 
           text: '技术文档', 
           icon: 'material-symbols:home-outline',
