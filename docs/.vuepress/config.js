@@ -11,6 +11,7 @@ export default defineUserConfig({
     head: [['meta', { name: 'baidu-site-verification', content: 'codeva-y4YVaKcM8p' }]],
 
     plugins: [
+
 /*
       ['@vuepress-reco/vuepress-plugin-bulletin-popover', {
         width: '800px', // 默认 260px
@@ -41,6 +42,13 @@ export default defineUserConfig({
     ],
 
     theme: plumeTheme({
+      profile: {
+        name: '李述铜',
+        description: '知识笔记',
+        avatar: '/avatar.png',
+        circle: true, // 是否为圆形头像
+      },
+
       logo: '/logo.png',      // logo
       footer: { copyright: 'Copyright © 2023-present lishutong' },
       hostname: 'https://www.lishutong1024.cn/',
@@ -297,7 +305,6 @@ export default defineUserConfig({
             },            
           ]
         },    
-        //{ text: '博客', link: '/blog/', icon: 'material-symbols:article-outline' },
         { 
           text: '更多', 
           icon: 'material-symbols:home-outline',
@@ -312,10 +319,18 @@ export default defineUserConfig({
                   icon: 'mdi:paper-airplane'    
                 },
             ]        
-            },            
+            },     
+            { 
+              text: '技术笔记', 
+              link: '/blog/', 
+              icon: 'material-symbols:article-outline' 
+            },       
           ]
         }, 
-        { text: '学习入口', link: 'https://app7ulykyut1996.pc.xiaoe-tech.com/', icon: 'material-symbols:article-outline' }, 
+        { 
+          text: '学习入口', 
+          link: 'https://app7ulykyut1996.pc.xiaoe-tech.com/', 
+          icon: 'material-symbols:article-outline' }, 
       ]
   }),
   bundler: viteBundler(),
