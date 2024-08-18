@@ -2,7 +2,7 @@
 title: 课程简介
 author: 李述铜
 createTime: 2024/08/08 11:54:25
-permalink: /tech/u6a2ka5q/
+permalink: /tech/fatfs/pd61lgrf/
 ---
 :::tip
 同学，你好，欢迎学习本课程！本课程是介绍了FATFS文件系统模块的基本使用，是一门相对较简单的课程。

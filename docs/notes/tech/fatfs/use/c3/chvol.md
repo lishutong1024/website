@@ -2,7 +2,7 @@
 title: 更改当前的驱动器
 author: 李述铜
 createTime: 2024/08/08 11:31:34
-permalink: /tech/y7p16m1b/
+permalink: /tech/fatfs/y7p16m1b/
 ---
 :::tip
 同学，你好，欢迎学习本课程！本课程是介绍了FATFS文件系统模块的基本使用，是一门相对较简单的课程。

@@ -2,7 +2,7 @@
 title: 资料下载
 author: 李述铜
 createTime: 2024/08/08 16:09:33
-permalink: /tech/m7had8a1/
+permalink: /tech/fatfs/n3nmvogz/
 ---
 FATFS所有课程的资料均包含在下列的链接和文档中，不再单独进行区分。
 

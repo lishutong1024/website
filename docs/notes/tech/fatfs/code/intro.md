@@ -2,7 +2,7 @@
 title: 课程简介
 author: 李述铜
 createTime: 2024/08/08 16:52:04
-permalink: /tech/s93s3bor/
+permalink: /tech/fatfs/47usho1i/
 ---
 :::tip
 同学，你好，欢迎学习本课程！本课程是介绍了FATFS文件系统模块的移植，该部分内容与特定硬件相关，较难。

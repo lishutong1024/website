@@ -2,7 +2,7 @@
 title: 文件系统的挂载
 author: 李述铜
 createTime: 2024/08/08 16:54:25
-permalink: /tech/82wy63jy/
+permalink: /tech/fatfs/7wz6c948/
 ---
 :::tip
 同学，你好，欢迎学习本课程！本课程是介绍了FATFS文件系统模块的移植，该部分内容与特定硬件相关，较难。

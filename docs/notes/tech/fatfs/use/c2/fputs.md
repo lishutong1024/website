@@ -2,7 +2,7 @@
 title: 以字符串方式写文件
 author: 李述铜
 createTime: 2024/08/08 10:30:41
-permalink: /tech/03wplvzz/
+permalink: /tech/fatfs/03wplvzz/
 ---
 :::tip
 同学，你好，欢迎学习本课程！本课程是介绍了FATFS文件系统模块的基本使用，是一门相对较简单的课程。

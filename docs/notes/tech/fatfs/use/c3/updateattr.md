@@ -2,7 +2,7 @@
 title: 更新文件属性
 author: 李述铜
 createTime: 2024/08/08 11:28:55
-permalink: /tech/uul7w6km/
+permalink: /tech/fatfs/uul7w6km/
 ---
 :::tip
 同学，你好，欢迎学习本课程！本课程是介绍了FATFS文件系统模块的基本使用，是一门相对较简单的课程。

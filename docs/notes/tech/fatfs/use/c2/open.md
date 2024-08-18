@@ -2,7 +2,7 @@
 title: 打开与关闭文件
 author: 李述铜
 createTime: 2024/08/08 10:29:38
-permalink: /tech/rnnq15g2/
+permalink: /tech/fatfs/rnnq15g2/
 ---
 :::tip
 同学，你好，欢迎学习本课程！本课程是介绍了FATFS文件系统模块的基本使用，是一门相对较简单的课程。

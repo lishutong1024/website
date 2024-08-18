@@ -2,7 +2,7 @@
 title: 创建目录
 author: 李述铜
 createTime: 2024/08/08 11:27:51
-permalink: /tech/hlqab0kq/
+permalink: /tech/fatfs/hlqab0kq/
 ---
 :::tip
 同学，你好，欢迎学习本课程！本课程是介绍了FATFS文件系统模块的基本使用，是一门相对较简单的课程。

@@ -2,7 +2,7 @@
 title: 文件写入刷新
 author: 李述铜
 createTime: 2024/08/08 10:30:15
-permalink: /tech/b09atkt6/
+permalink: /tech/fatfs/b09atkt6/
 ---
 :::tip
 同学，你好，欢迎学习本课程！本课程是介绍了FATFS文件系统模块的基本使用，是一门相对较简单的课程。

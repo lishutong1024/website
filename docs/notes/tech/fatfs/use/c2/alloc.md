@@ -2,7 +2,7 @@
 title: 为文件分配连续空间
 author: 李述铜
 createTime: 2024/08/08 10:31:36
-permalink: /tech/espov3f0/
+permalink: /tech/fatfs/espov3f0/
 ---
 :::tip
 同学，你好，欢迎学习本课程！本课程是介绍了FATFS文件系统模块的基本使用，是一门相对较简单的课程。

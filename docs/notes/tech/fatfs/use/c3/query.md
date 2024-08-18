@@ -2,7 +2,7 @@
 title: 查询目录及文件信息
 author: 李述铜
 createTime: 2024/08/08 11:16:31
-permalink: /tech/nwdn929i/
+permalink: /tech/fatfs/nwdn929i/
 ---
 :::tip
 同学，你好，欢迎学习本课程！本课程是介绍了FATFS文件系统模块的基本使用，是一门相对较简单的课程。

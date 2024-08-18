@@ -2,7 +2,7 @@
 title: FAT文件系统简介
 author: 李述铜
 createTime: 2024/08/08 10:10:52
-permalink: /tech/tb38lzra/
+permalink: /tech/fatfs/um70wlxy/
 ---
 :::tip
 同学，你好，欢迎学习本课程！本课程是介绍了FATFS文件系统模块的基本使用，是一门相对较简单的课程。

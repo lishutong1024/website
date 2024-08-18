@@ -7,7 +7,7 @@ config:
     hero:
       name: 欢迎来到我的主页
       tagline: 深研底层，练就硬核内功
-      text: 深入浅出介绍底层相关的原理和细节，助你提升技术认知新高度
+      text: 深入浅出介绍核心原理和细节，助你提升技术认知新高度
       actions:
         - 
           theme: brand
@@ -16,7 +16,7 @@ config:
         -
           theme: alt
           text: 了解课程
-          link: /courses/9fnvakv8/
+          link: ../../../notes/courses/core/diylinux.md
  -  type: features
     title: 课程特色
     features:
@@ -70,7 +70,7 @@ config:
     type: custom
 ---
 ::: info
-如果你对我的课程感兴趣，可以选择[开始学习](https://app7ulykyut1996.pc.xiaoe-tech.com)或者[了解课程](/courses/9fnvakv8/)!
+如果你对我的课程感兴趣，可以选择[开始学习](https://app7ulykyut1996.pc.xiaoe-tech.com)或者[了解课程](../../../notes/courses/core/diylinux.md)!
 
 如果对课程有疑问是，欢迎扫下面的微信与我取得联系。
 

@@ -2,7 +2,7 @@
 title: 切换工作目录
 author: 李述铜
 createTime: 2024/08/08 11:22:19
-permalink: /tech/5klrikbj/
+permalink: /tech/fatfs/5klrikbj/
 ---
 :::tip
 同学，你好，欢迎学习本课程！本课程是介绍了FATFS文件系统模块的基本使用，是一门相对较简单的课程。

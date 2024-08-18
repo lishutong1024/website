@@ -2,7 +2,7 @@
 title: 支持TF卡
 author: 李述铜
 createTime: 2024/08/08 12:14:26
-permalink: /tech/u80e7jgh/
+permalink: /tech/fatfs/u80e7jgh/
 ---
 :::tip
 同学，你好，欢迎学习本课程！本课程是介绍了FATFS文件系统模块的基本使用，是一门相对较简单的课程。

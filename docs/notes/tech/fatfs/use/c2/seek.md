@@ -2,7 +2,7 @@
 title: 文件读写定位
 author: 李述铜
 createTime: 2024/08/08 10:30:58
-permalink: /tech/j7dq7wok/
+permalink: /tech/fatfs/j7dq7wok/
 ---
 :::tip
 同学，你好，欢迎学习本课程！本课程是介绍了FATFS文件系统模块的基本使用，是一门相对较简单的课程。

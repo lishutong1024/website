@@ -2,7 +2,7 @@
 title: 什么是文件系统
 author: 李述铜
 createTime: 2024/08/08 08:56:32
-permalink: /tech/5zlvcsn3/
+permalink: /tech/fatfs/5zlvcsn3/
 ---
 :::tip
 同学，你好，欢迎学习本课程！本课程是介绍了FATFS文件系统模块的基本使用，是一门相对较简单的课程。

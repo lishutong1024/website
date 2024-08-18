@@ -2,7 +2,7 @@
 title: FATFS文件组织
 author: 李述铜
 createTime: 2024/08/08 12:13:17
-permalink: /tech/n7vdmeek/
+permalink: /tech/fatfs/8nua5i1b/
 ---
 :::tip
 同学，你好，欢迎学习本课程！本课程是介绍了FATFS文件系统模块的基本使用，是一门相对较简单的课程。

@@ -74,67 +74,67 @@ export default defineUserConfig({
                 text: '嵌入式', 
                 icon: 'mdi:language-typescript', // 侧边栏图标
                 items: [
+                  'emebed/riscv',
                   'emebed/arm', 
                   'emebed/fatfs', 
                   'emebed/rtos', 
-                  'emebed/riscv'
                 ] 
               },
 
             ]
           },     
           {
-            dir: 'tech',
-            link: '/tech/',
+            dir: 'tech/fatfs/',
+            link: '/tech/fatfs/',
             sidebar: [
               {
                 text: '资料下载',
-                link: 'fatfs/download.md', 
+                link: 'download.md', 
               },
               {
                 text: 'FATFS入门指南',
                 collapsed: true,
                 icon: 'mdi:language-typescript', // 侧边栏图标
                 items: [
-                  'fatfs/use/intro.md', 
+                  'use/intro.md', 
                   {
                     text: '基本概念与原理',
                     collapsed: true,
                     items: [
-                      'fatfs/use/c1/fs.md',
-                      'fatfs/use/c1/fat.md',
-                      'fatfs/use/c1/fatfs.md',
+                      'use/c1/fs.md',
+                      'use/c1/fat.md',
+                      'use/c1/fatfs.md',
                     ]         
                   },
                   {
                     text: '使用文件访问接口',
                     collapsed: true,
                     items: [
-                      'fatfs/use/c2/mount.md',
-                      'fatfs/use/c2/open.md',
-                      'fatfs/use/c2/read.md',
-                      'fatfs/use/c2/sync.md',
-                      'fatfs/use/c2/fgets.md',
-                      'fatfs/use/c2/fputs.md',
-                      'fatfs/use/c2/seek.md',
-                      'fatfs/use/c2/stat.md',
-                      'fatfs/use/c2/trunc.md',
-                      'fatfs/use/c2/alloc.md',
-                      'fatfs/use/c2/foword.md',
+                      'use/c2/mount.md',
+                      'use/c2/open.md',
+                      'use/c2/read.md',
+                      'use/c2/sync.md',
+                      'use/c2/fgets.md',
+                      'use/c2/fputs.md',
+                      'use/c2/seek.md',
+                      'use/c2/stat.md',
+                      'use/c2/trunc.md',
+                      'use/c2/alloc.md',
+                      'use/c2/foword.md',
                     ]         
                   },                 
                   {
                     text: '目录与文件管理',
                     collapsed: true,
                     items: [
-                      'fatfs/use/c3/query.md',
-                      'fatfs/use/c3/list.md',
-                      'fatfs/use/c3/find.md',
-                      'fatfs/use/c3/chdir.md',
-                      'fatfs/use/c3/del.md',
-                      'fatfs/use/c3/create.md',
-                      'fatfs/use/c3/updateattr.md',
-                      'fatfs/use/c3/chvol.md',
+                      'use/c3/query.md',
+                      'use/c3/list.md',
+                      'use/c3/find.md',
+                      'use/c3/chdir.md',
+                      'use/c3/del.md',
+                      'use/c3/create.md',
+                      'use/c3/updateattr.md',
+                      'use/c3/chvol.md',
                       
                     ]         
                   },  
@@ -142,8 +142,8 @@ export default defineUserConfig({
                     text: '卷管理与系统配置',
                     collapsed: true,
                     items: [
-                      'fatfs/use/c4/free.md',
-                      'fatfs/use/c4/getlabel.md',
+                      'use/c4/free.md',
+                      'use/c4/getlabel.md',
                     ]         
                   },  
                 ]
@@ -153,23 +153,23 @@ export default defineUserConfig({
                 icon: 'mdi:language-typescript', // 侧边栏图标
                 collapsed: true,
                 items: [
-                  'fatfs/port/intro.md', 
+                  'port/intro.md', 
                   {
                     text: '基本概念与原理',
                     collapsed: true,
                     items: [
-                      'fatfs/port/c1/whatsport.md',
-                      'fatfs/port/c1/files.md',
+                      'port/c1/whatsport.md',
+                      'port/c1/files.md',
                     ]         
                   },
                   {
                     text: '移植详解',
                     collapsed: true,
                     items: [
-                      'fatfs/port/c2/visualstudio.md',
-                      'fatfs/port/c2/gdb32_w25q64.md',
-                      'fatfs/port/c2/gdb32_sdcard.md',
-                      'fatfs/port/c2/gdb32_rtos.md',
+                      'port/c2/visualstudio.md',
+                      'port/c2/gdb32_w25q64.md',
+                      'port/c2/gdb32_sdcard.md',
+                      'port/c2/gdb32_rtos.md',
                     ]         
                   },
                 ] 
@@ -179,8 +179,8 @@ export default defineUserConfig({
                 icon: 'mdi:language-typescript', // 侧边栏图标
                 collapsed: true,
                 items: [
-                  'fatfs/code/intro.md', 
-                  'fatfs/code/mount.md', 
+                  'code/intro.md', 
+                  'code/mount.md', 
 
                 ] 
               },
@@ -229,6 +229,11 @@ export default defineUserConfig({
               prefix: 'emebed/',
               items: [
                 {
+                  text: 'RISC-V开发',
+                  link: 'riscv',
+                  icon: 'mdi:paper-airplane'    
+                },                
+                {
                 text: 'FATFS应用指南',
                 link: 'fatfs',
                 icon: 'mdi:paper-airplane'    
@@ -243,31 +248,32 @@ export default defineUserConfig({
                   link: 'arm',
                   icon: 'mdi:paper-airplane'    
                 },
-                {
-                  text: 'RISC-V开发',
-                  link: 'riscv',
-                  icon: 'mdi:paper-airplane'    
-                },
+
             ]        
-            },
-            {
-              text: '查看全部',
-              link: '/courses',
-              icon: 'mdi:paper-airplane'    
-            },               
+            },     
           ]
         },
         {
           text: '资料 & 答疑',
           icon: 'material-symbols:home-outline',
-          prefix: "/notes/note/",
+          prefix: '/notes/',
           items: [
+            {
+              text: '课程资料', 
+              items: [   
+                {
+                  text: '资料下载',
+                  link: 'note/doc.md',
+                  icon: 'mdi:paper-airplane'    
+                },
+              ]
+            }, 
             {
               text: '学习方法', 
               items: [   
                 {
                   text: '正确的提问方式',
-                  link: 'question',
+                  link: 'note/question',
                   icon: 'mdi:paper-airplane'    
                 },
             ]        
