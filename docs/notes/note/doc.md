@@ -15,7 +15,7 @@ permalink: /article/ceok23ne/
 免费课程的所有资料，可全部免费访问及下载：
 
 * [FATFS使用指南（含使用、移植、源码分析）三门课程](../../notes/tech/fatfs/code/intro.md)。
-
+* [从零玩转RT-Thread（含使用、移植）两门课程](../../notes/tech/rtthread/use/c1/intro.md)。
 * [用1500行代码手写TCPIP + WEB服务器](../../notes/tech/tcp_web/intro.md)。
 
 ## 付费课程
