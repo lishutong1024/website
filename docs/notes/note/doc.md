@@ -19,7 +19,7 @@ permalink: /article/ceok23ne/
 * [用1500行代码手写TCPIP + WEB服务器](../../notes/tech/tcp_web/intro.md)。
 
 ## 付费课程
-付费课程的资料，不公开，需要申请！
+付费课程的资料，不公开，需要申请才能查看！
 
 ::: details 申请方法
 
@@ -33,6 +33,15 @@ permalink: /article/ceok23ne/
 
 **资料申请过后，可以用自己申请资料查看权限时的语雀账号，登录[语雀官网](https://www.yuque.com)，然后在自己的知识库下找到该课程的知识库。如果在自己的知识库中找不到，也可点击以下链接直接访问：**
 
+
+::: details 在语雀中查看知识库的方法
+
+如果想在语雀客户端或者网页中查看已经获取的知识库，可以通过以下方法来找到。**（注意，需要先登陆语雀）**
+
+![alt text](../../.vuepress/public/image/docs/notes/note/doc/image.png)
+
+:::
+
 **注意，以下链接需要通过申请，并且要登陆了语雀才能查看；否则，将显示链接找不到404错误。**
 
 ::: card title="计算机核心基础课" icon="twemoji:astonished-face"
@@ -45,14 +54,13 @@ permalink: /article/ceok23ne/
 
 ::: card title="网络协议" icon="twemoji:astonished-face"
 
-- [从0设计HTTP服务器](https://www.yuque.com/lishutong-docs/http)
+- [从0设计多线程HTTP服务器](https://www.yuque.com/lishutong-docs/http)
 - [从0手写TFTP客户端和服务器](https://www.yuque.com/lishutong-docs/sfidy6)
 
 :::
 
 ::: card title="嵌入式操作系统" icon="twemoji:astonished-face"
 
-- [深入理解RTOS任务切换机制](https://www.yuque.com/lishutong-docs/ndpuig)
 - [手把手教你用RTOS](https://www.yuque.com/lishutong-docs/urtos)
 - [从0手写嵌入式RTOS](https://www.yuque.com/lishutong-docs/drtos)
 
@@ -60,8 +68,10 @@ permalink: /article/ceok23ne/
 
 ::: card title="ARM" icon="twemoji:astonished-face"
 
-- [Cortex-M汇编语言程序设计](https://www.yuque.com/lishutong-docs/armdis)
-- [Cortex-M体系结构与编程](https://www.yuque.com/lishutong-docs/ad4bbt)
+- [深入理解ARM体系结构-Cortex-M体系结构与编程](https://www.yuque.com/lishutong-docs/ad4bbt)
+- [深入理解ARM体系结构-汇编语言程序设计](https://www.yuque.com/lishutong-docs/armdis)
+- [深入理解ARM体系结构-编译器使用指南](https://www.yuque.com/lishutong-docs/armclang)
+- [深入理解ARM体系结构-RTOS任务切换机制详解](https://www.yuque.com/lishutong-docs/ndpuig)
 
 :::
 

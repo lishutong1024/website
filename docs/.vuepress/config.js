@@ -76,6 +76,7 @@ export default defineUserConfig({
                   'core/diylinux', 
                   'core/diytcpip',
                   'core/diyfat32', 
+                  'core/tcp_web', 
                 ]
               },
               { 
@@ -86,8 +87,18 @@ export default defineUserConfig({
                   'emebed/arm', 
                   'emebed/fatfs', 
                   'emebed/rtos', 
-                ] 
+                  'emebed/rtos_old',
+                  'emebed/8051'
+                ]
               },
+              {
+                text: '网络协议',
+                icon: 'mdi:language-typescript', // 侧边栏图标
+                items: [
+                  'network/http', 
+                  'network/tftp',
+                ]
+              }
 
             ]
           },     
@@ -310,7 +321,7 @@ export default defineUserConfig({
           text: '课程介绍', 
           icon: 'material-symbols:home-outline',
           prefix: "/notes/courses/",
-          link: '/notes/courses/core/diylinux',
+          link: '/notes/courses/list',
         },
         {
           text: '课程资料',
