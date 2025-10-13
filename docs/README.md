@@ -13,10 +13,6 @@ config:
           theme: brand
           text: 开始学习 →
           link: https://app7ulykyut1996.pc.xiaoe-tech.com
-        -
-          theme: alt
-          text: 了解课程
-          link: ../../../notes/courses/core/diylinux.md
  -  type: features
     title: 课程特色
     features:
