@@ -2,7 +2,7 @@
 title: 在操作系统开发中选bochs还是qemu
 author: 李述铜
 createTime: 2024/08/18 19:45:28
-permalink: /article/4vykxgwf/
+permalink: /article/newrtos/
 tags:
     - 操作系统
     - 模拟器

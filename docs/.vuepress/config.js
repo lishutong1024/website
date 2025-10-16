@@ -347,7 +347,7 @@ export default defineUserConfig({
             },     
             { 
               text: '技术笔记', 
-              link: '/blog/', 
+              link: '/article/', 
               icon: 'material-symbols:article-outline' 
             },       
           ]
