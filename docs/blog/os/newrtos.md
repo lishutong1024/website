@@ -1,13 +1,11 @@
 ---
-title: 在操作系统开发中选bochs还是qemu
+title: 作为嵌入式开发者，有必要手写一个RTOS吗
 author: 李述铜
 createTime: 2024/08/18 19:45:28
 permalink: /article/newrtos/
 tags:
     - 操作系统
-    - 模拟器
-    - bochs
-    - qemu
+    - RTOS
 ---
 ## 💡怎样才能掌握 RTOS？
 
