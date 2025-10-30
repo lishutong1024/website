@@ -42,6 +42,10 @@ export default defineUserConfig({
     ],
 
     theme: plumeTheme({
+      collections: [
+        { type: 'post', dir: 'blog', title: '博客' } 
+      ],
+
       profile: {
         name: '李述铜',
         description: '知识笔记',
@@ -317,12 +321,12 @@ export default defineUserConfig({
       // 导航条
       navbar: [
         { text: '首页', link: '/', icon: 'material-symbols:home-outline' },
-        { 
-          text: '课程介绍', 
-          icon: 'material-symbols:home-outline',
-          prefix: "/notes/courses/",
-          link: '/notes/courses/list',
-        },
+        //{ 
+        //  text: '课程介绍', 
+        //  icon: 'material-symbols:home-outline',
+        //  prefix: "/notes/courses/",
+        //  link: '/notes/courses/list',
+        //},
         {
           text: '课程资料',
           icon: 'material-symbols:home-outline',
@@ -330,28 +334,12 @@ export default defineUserConfig({
           link: '/notes/note/doc.md',
       
         },  
-        { 
-          text: '更多', 
+        {
+          text: '博客文章',
           icon: 'material-symbols:home-outline',
-          prefix: "/notes/others/",
-          items: [
-            {
-              text: '推荐', 
-              items: [   
-                {
-                  text: '优秀书籍',
-                  link: 'books',
-                  icon: 'mdi:paper-airplane'    
-                },
-            ]        
-            },     
-            { 
-              text: '技术笔记', 
-              link: '/article/', 
-              icon: 'material-symbols:article-outline' 
-            },       
-          ]
-        }, 
+          link: '/blog/',
+      
+        },  
         { 
           text: '学习入口', 
           link: 'https://app7ulykyut1996.pc.xiaoe-tech.com/', 
