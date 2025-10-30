@@ -1,8 +1,6 @@
 import { defineUserConfig } from 'vuepress'
 import { viteBundler } from '@vuepress/bundler-vite'
 import { plumeTheme } from 'vuepress-theme-plume'
-import { baiduAnalyticsPlugin } from '@vuepress/plugin-baidu-analytics'
-import { alertPlugin } from "vuepress-plugin-alert"
 
 export default defineUserConfig({
     lang: 'zh-CN',
@@ -36,9 +34,9 @@ export default defineUserConfig({
         ]
       }],*/
 
-      baiduAnalyticsPlugin({
-        id: "0ec0df4a6adf20a6a93079b1a41f0816", 
-      }),
+      //baiduAnalyticsPlugin({
+     //   id: "0ec0df4a6adf20a6a93079b1a41f0816", 
+     //}),
     ],
 
     theme: plumeTheme({
