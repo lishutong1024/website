@@ -59,6 +59,7 @@ export default defineUserConfig({
       },
 
       collections: [
+          { type: 'post', dir: 'blog', title: '博客' },
         {
           type: "doc",
           dir: '/notes/tech/fatfs/',
