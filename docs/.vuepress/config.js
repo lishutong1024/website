@@ -65,7 +65,7 @@ export default defineUserConfig({
         id: "新课优惠",
         title: "新课上线！《从零手写RTOS》",
         contentType: "markdown",
-        contentFile: "docs/rtos_note.md",
+        contentFile: "docs/notes/rtos_note.md",
       },
 
       collections: [
