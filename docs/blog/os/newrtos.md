@@ -118,4 +118,8 @@ tags:
 
 《从0到1手写嵌入式操作系统》老学员专属：再减100元（券后498元）。
 
-课程购买链接:<https://app7ulykyut1996.h5.xiaoeknow.com/v1/goods/goods_detail/SPU_COP_1704459226E22xwR3IprTAO>
+无需支付额外费用，购买课程即送开发板。扫描下面二维码，立即了解课程详情
+
+![alt text](<../../.vuepress/public/image/docs/blog/os/newrtos copy/image-8.png>)
+
+也可直接点击课程链接直接访问:[课程链接](https://app7ulykyut1996.h5.xiaoeknow.com/v1/goods/goods_detail/SPU_COP_1704459226E22xwR3IprTAO)

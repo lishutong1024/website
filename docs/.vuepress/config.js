@@ -58,6 +58,16 @@ export default defineUserConfig({
         },
       },
 
+      bulletin: {
+        layout: 'center',
+        lifetime: 'session',       // 'session' | 'always' | 'once'
+        border: true,
+        id: "新课优惠",
+        title: "新课上线！《从零手写RTOS》",
+        contentType: "markdown",
+        contentFile: "docs/rtos_note.md",
+      },
+
       collections: [
           { type: 'post', dir: 'blog', title: '博客' },
         {
