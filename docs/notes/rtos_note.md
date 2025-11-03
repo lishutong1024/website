@@ -8,5 +8,5 @@
 
 👉 [点击了解课程详情](https://zw8ls.xetlk.com/s/H2F1Y)或扫码
 
-![alt text](../.vuepress/public/rtosv2.png)
+![alt text](rtosv2.png)
 
