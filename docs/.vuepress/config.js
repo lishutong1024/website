@@ -59,7 +59,7 @@ export default defineUserConfig({
       },
 
       bulletin: {
-        layout: 'center',
+        layout: 'top-right',
         lifetime: 'session',       // 'session' | 'always' | 'once'
         border: true,
         id: "新课优惠",
