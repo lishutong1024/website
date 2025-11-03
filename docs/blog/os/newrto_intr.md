@@ -20,7 +20,7 @@ permalink: /blog/2njixon1/
 
 💡**这块开发板能做什么？**它不是普通的开发板，也不仅仅是用来演示RTOS API使用方法的工具。**它是一块为深入理解RTOS原理和动手实战而设计的开发板**。
 
-![alt text](<../../.vuepress/public/image/docs/blog/os/newrtos copy/image.png>)
+![alt text](<../../.vuepress/public/image/docs/blog/os/newrtos_copy/image.png>)
 
 你可以在板上做两件事：
 
@@ -38,18 +38,18 @@ permalink: /blog/2njixon1/
 
 无论你是想了解现代嵌入式架构，还是希望掌握面向主流硬件的系统开发能力，这门课程都将让你亲手在真实硬件上实现操作系统核心模块，全面掌握任务调度、延时机制、中断管理等关键技术
 
-![alt text](<../../.vuepress/public/image/docs/blog/os/newrtos copy/image-1.png>)
+![alt text](<../../.vuepress/public/image/docs/blog/os/newrtos_copy/image-1.png>)
 
 + 课时/章节：约140个课时，总时长34+小时，共18章
 + 学习目标：从空白工程开始，手写完整RTOS内核
 + 系统覆盖：基于裸机，可运行于基于RISC-V和ARM Cortex-M的各类芯片
 + 目前，该课程已经更新完毕。各个章节的内容安排如下：
 
-![alt text](<../../.vuepress/public/image/docs/blog/os/newrtos copy/image-2.png>)
+![alt text](<../../.vuepress/public/image/docs/blog/os/newrtos_copy/image-2.png>)
 
 **本课程相比我早前开发的《从0到1手写嵌入式操作系统》课程，所有代码完全重写，更详细丰富，更贴近实际工程。**
 
-![alt text](<../../.vuepress/public/image/docs/blog/os/newrtos copy/image-3.png>)
+![alt text](<../../.vuepress/public/image/docs/blog/os/newrtos_copy/image-3.png>)
 
 **课程二：项目实战——远程温湿度监控设备**
 
@@ -57,9 +57,9 @@ permalink: /blog/2njixon1/
 
 该设备能够实时采集环境温湿度数据、记录采集时间、存储至SD卡，并将数据上传到指定服务器。用户可以通过电脑或手机浏览器访问，查看历史采集数据，实现远程监控。
 
-![alt text](<../../.vuepress/public/image/docs/blog/os/newrtos copy/image-4.png>)
+![alt text](<../../.vuepress/public/image/docs/blog/os/newrtos_copy/image-4.png>)
 
-![alt text](<../../.vuepress/public/image/docs/blog/os/newrtos copy/image-5.png>)  
+![alt text](<../../.vuepress/public/image/docs/blog/os/newrtos_copy/image-5.png>)  
 
 通过该项目，你将掌握：
 
@@ -72,7 +72,7 @@ permalink: /blog/2njixon1/
 
 + 目前，该课程正在更新中。各个章节的内容安排如下：
 
-![alt text](<../../.vuepress/public/image/docs/blog/os/newrtos copy/image-6.png>)
+![alt text](<../../.vuepress/public/image/docs/blog/os/newrtos_copy/image-6.png>)
 
 🎯 如果你目前存在以下困惑，那么这门课程特别适合你
 
@@ -96,7 +96,7 @@ permalink: /blog/2njixon1/
 
 如果之前没有学过RTOS，可以先学习一款主流的RTOS，比如RT-Thread。我也提供了相关的课程，从而了解什么是RTOS及其常见的使用接口。
 
-![alt text](<../../.vuepress/public/image/docs/blog/os/newrtos copy/image-7.png>)
+![alt text](<../../.vuepress/public/image/docs/blog/os/newrtos_copy/image-7.png>)
 
 在学习完毕之后，就可以转而学习本课程。
 
@@ -119,6 +119,6 @@ permalink: /blog/2njixon1/
 
 无需支付额外费用，购买课程即送开发板。扫描下面二维码，立即了解课程详情
 
-![alt text](<../../.vuepress/public/image/docs/blog/os/newrtos copy/image-8.png>)
+![alt text](<../../.vuepress/public/image/docs/blog/os/newrtos_copy/image-8.png>)
 
 也可直接点击课程链接直接访问:[课程链接](https://app7ulykyut1996.h5.xiaoeknow.com/v1/goods/goods_detail/SPU_COP_1704459226E22xwR3IprTAO)
