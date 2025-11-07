@@ -187,8 +187,5 @@ RISC-V的特点是：
 
 ● 老学员专享100元额外优惠（券后498元，请联系我获取）
 
-**无需支付额外费用，购买课程即送开发板**。扫描下面二维码，立即了解课程详情
-
-![alt text](../../.vuepress/public/rtosv2.png)
-
-也可直接点击课程链接直接访问:[课程链接](https://app7ulykyut1996.h5.xiaoeknow.com/v1/goods/goods_detail/SPU_COP_1704459226E22xwR3IprTAO)
+**无需支付额外费用，购买课程即送开发板**。
+点击课程链接直接访问:[课程链接](https://app7ulykyut1996.h5.xiaoeknow.com/v1/goods/goods_detail/SPU_COP_1704459226E22xwR3IprTAO)
