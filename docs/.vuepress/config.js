@@ -46,6 +46,9 @@ export default defineUserConfig({
         avatar: '/avatar.png',
         circle: true, // 是否为圆形头像
       },
+      markdown: {
+        bilibili: true, 
+      },
 
       logo: '/logo.png',      // logo
       footer: { copyright: 'Copyright © 2023-present lishutong' },
