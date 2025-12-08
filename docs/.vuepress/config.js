@@ -4,8 +4,8 @@ import { plumeTheme } from 'vuepress-theme-plume'
 
 export default defineUserConfig({
     lang: 'zh-CN',
-    title: '李述铜的知识课堂',
-    description: '李述铜的知识课堂（lishutong1024.cn），专注于技术文档分享与知识传播。涵盖嵌入式领域的 FATFS 使用详解等专业内容，还有优秀书籍推荐及丰富的学习资源。深入浅出介绍底层原理和细节，助你提升技术认知，开启硬核学习之旅',
+    title: '李述铜的嵌入式课堂',
+    description: '李述铜的嵌入式课堂（lishutong1024.cn），专注于技术文档分享与知识传播。涵盖嵌入式领域的 FATFS 使用详解等专业内容，还有优秀书籍推荐及丰富的学习资源。深入浅出介绍底层原理和细节，助你提升技术认知，开启硬核学习之旅',
     head: [['meta', { name: 'baidu-site-verification', content: 'codeva-y4YVaKcM8p' }]],
 
     plugins: [
