@@ -4,6 +4,11 @@ author: 李述铜
 createTime: 2025/08/30 13:13:28
 permalink: /tech/rtthread/ydb8jts0/
 ---
+> 为了更好地使用RTOS，我们需要深入理解RTOS工作原理，最好的方法是动手写一个RTOS。
+>
+> 如果你希望写一个类似RT-Thread/FreeRTOS的系统，欢迎关注这门课程：[【RTOS内核开发】从0手写嵌入式操作系统](https://zw8ls.xetlk.com/s/H2F1Y)
+>
+
 ## 什么是主动让出CPU
 **任务主动让出CPU**意味着任务当前可以运行，但它**自愿放弃运行权**，允许调度器切换到其他就绪任务（通常是同优先级或更高优先级的任务）。
 

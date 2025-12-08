@@ -4,6 +4,11 @@ author: 李述铜
 createTime: 2025/08/30 12:45:18
 permalink: /tech/rtthread/qvaesazs/
 ---
+> 为了更好地使用RTOS，我们需要深入理解RTOS工作原理，最好的方法是动手写一个RTOS。
+>
+> 如果你希望写一个类似RT-Thread/FreeRTOS的系统，欢迎关注这门课程：[【RTOS内核开发】从0手写嵌入式操作系统](https://zw8ls.xetlk.com/s/H2F1Y)
+>
+
 ## 开发环境准备
 :::danger
 注意，本课程的主要关注点在RT-Thread。因此，不会将有限的视频内容浪费在开发板硬件的使用细节等内容中。

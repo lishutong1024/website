@@ -4,6 +4,11 @@ author: 李述铜
 createTime: 2025/08/30 13:08:51
 permalink: /tech/rtthread/kandixhj/
 ---
+> 为了更好地使用RTOS，我们需要深入理解RTOS工作原理，最好的方法是动手写一个RTOS。
+>
+> 如果你希望写一个类似RT-Thread/FreeRTOS的系统，欢迎关注这门课程：[【RTOS内核开发】从0手写嵌入式操作系统](https://zw8ls.xetlk.com/s/H2F1Y)
+>
+
 我们已经了解了任务是什么，在接下来将介绍RTOS是如何标识一个任务、如何将众多任务进行组织、按照何种策略选定任务运行。
 
 ## RTOS 如何标识每个任务？——使用任务控制块（TCB）
