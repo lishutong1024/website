@@ -514,6 +514,25 @@ export default defineUserConfig({
       
         },  
         {
+          text: '推荐课程',
+          icon: 'material-symbols:home-outline',
+          prefix: '/notes/',
+          items:[
+            {
+              text: '从0手写x86操作系统',
+              link: '/notes/courses/core/diylinux.md',
+            },
+            {
+              text: '从0手写TCP/IP协议栈',
+              link: '/notes/courses/core/diytcpip.md',
+            },
+            {
+              text: '从0手写嵌入式操作系统',
+              link: '/blog/os/rtos_new.md',
+            },
+          ],
+        },  
+        {
           text: '博客文章',
           icon: 'material-symbols:home-outline',
           link: '/blog/',
