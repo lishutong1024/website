@@ -73,6 +73,66 @@ export default defineUserConfig({
 
       collections: [
           { type: 'post', dir: 'blog', title: '博客' },
+
+        {
+          type: "doc",
+          dir: '/notes/tech/osswitch/',
+          linkPrefix: "/tech/osswitch/",
+          sidebar: [
+            {
+              text: '课程简介',
+              link: 'intro.md', 
+            },
+            {
+              text: '视频内容',
+              link: 'video.md', 
+            },
+            {
+              text: '前后台系统与RTOS',
+              link: 'background_rtos.md', 
+            },
+            {
+              text: '函数调用后如何返回',
+              link: 'funcret.md', 
+            },
+            {
+              text: '从多层函数调用中返回',
+              link: 'mulret.md', 
+            },
+            {
+              text: '相互调用实现任务伪切换',
+              link: 'mmcall.md', 
+            },
+            {
+              text: '利用跳转指令实现切换',
+              link: 'jmpswitch.md', 
+            },
+            {
+              text: '保存返回地址实现任务切换',
+              link: 'save_ret.md', 
+            },
+            {
+              text: '让每个任务都有自己的栈',
+              link: 'taskstack.md', 
+            },
+            {
+              text: '加载内核寄存器的初始值',
+              link: 'reginit.md', 
+            },
+            {
+              text: '保存内存寄存器的当前值',
+              link: 'saveregval.md', 
+            },
+            {
+              text: '封装任务的task结构',
+              link: 'interface.md', 
+            },
+            {
+              text: '扩展更多功能',
+              link: 'more.md', 
+            },
+          ]
+        }, 
         {
           type: "doc",
           dir: '/notes/tech/fatfs/',

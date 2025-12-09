@@ -17,11 +17,12 @@ permalink: /article/ceok23ne/
 * [FATFS使用指南（含使用、移植、源码分析）三门课程](../../notes/tech/fatfs/code/intro.md)。
 * [从零玩转RT-Thread（含使用、移植）两门课程](../../notes/tech/rtthread/use/c1/intro.md)。
 * [用1500行代码手写TCPIP + WEB服务器](../../notes/tech/tcp_web/intro.md)。
+* [深入理解RTOS任务切换机制](../../notes/tech/osswitch/intro.md)
 
 ## 付费课程
 付费课程的资料，不公开，需要申请才能查看！
 
-::: details 申请方法
+::: details 资料申请方法
 
 请在购买相关课程后，将购买订单截图发给我验证，获得资料的申请链接。
 
@@ -42,50 +43,4 @@ permalink: /article/ceok23ne/
 
 :::
 
-**注意，以下链接需要通过申请，并且要登陆了语雀才能查看；否则，将显示链接找不到404错误。**
-
-::: card title="计算机核心基础课" icon="twemoji:astonished-face"
-
-- [从0手写x86 Linux操作系统](https://www.yuque.com/lishutong-docs/x86os)
-- [从0手写TCP/IP协议栈](https://www.yuque.com/lishutong-docs/tcpip)
-- [从0手写FAT32文件系统](https://www.yuque.com/lishutong-docs/fat32)
-
-:::
-
-::: card title="网络协议" icon="twemoji:astonished-face"
-
-- [从0设计多线程HTTP服务器](https://www.yuque.com/lishutong-docs/http)
-- [从0手写TFTP客户端和服务器](https://www.yuque.com/lishutong-docs/sfidy6)
-
-:::
-
-::: card title="嵌入式操作系统" icon="twemoji:astonished-face"
-
-- [手把手教你用RTOS](https://www.yuque.com/lishutong-docs/urtos)
-- [从0手写嵌入式RTOS](https://www.yuque.com/lishutong-docs/drtos)
-
-:::
-
-::: card title="ARM" icon="twemoji:astonished-face"
-
-- [深入理解ARM体系结构-Cortex-M体系结构与编程](https://www.yuque.com/lishutong-docs/ad4bbt)
-- [深入理解ARM体系结构-汇编语言程序设计](https://www.yuque.com/lishutong-docs/armdis)
-- [深入理解ARM体系结构-编译器使用指南](https://www.yuque.com/lishutong-docs/armclang)
-- [深入理解ARM体系结构-RTOS任务切换机制详解](https://www.yuque.com/lishutong-docs/ndpuig)
-
-:::
-
-::: card title="RISC-V" icon="twemoji:astonished-face"
-
-- [从0手写RISC-V模拟器](https://www.yuque.com/lishutong-docs/vtelaz)
-- [RISC-V内核体系详解（基于青稞处理器）](https://www.yuque.com/lishutong-docs/rtos_riscv)
-
-:::
-
-::: card title="8051芯片" icon="twemoji:astonished-face"
-
-- [从0手写8051虚拟机](https://www.yuque.com/lishutong-docs/8051)
-
-:::
-
---- 
+不再开放付费课程的相关资料链接。
