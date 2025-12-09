@@ -2,7 +2,7 @@
 title: 作为嵌入式开发者，有必要手写一个RTOS吗
 author: 李述铜
 createTime: 2024/08/18 19:45:28
-permalink: /blog/rtos/
+permalink: /blog/howmastrtos/
 tags:
     - 操作系统
     - RTOS

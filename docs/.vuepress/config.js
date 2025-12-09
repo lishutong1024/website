@@ -528,7 +528,7 @@ export default defineUserConfig({
             },
             {
               text: '从0手写嵌入式操作系统',
-              link: '/blog/os/rtos_new.md',
+              link: '/blog/os/newrto_intr.md',
             },
           ],
         },  
