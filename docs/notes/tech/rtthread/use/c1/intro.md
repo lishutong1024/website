@@ -13,6 +13,14 @@ permalink: /tech/rtthread/mi5rlb0b/
 
 <font style="color:#DF2A3F;">此外，本课程为免费开放的课程，不提供任何形式的答疑和支持。</font>
 
+**视频内容**
+
+视频部分我发布在：
+
+
+* [我的课程平台](https://zw8ls.xetlk.com/s/4rHleg)
+* [BiliBili](https://www.bilibili.com/video/BV1KgpTzuEeu?vd_source=1aefce8e7535eedeeecd31b71bd3ff0e&spm_id_from=333.788.videopod.sections)
+
 ---
 
 本课程为整个开发系列课程 的入门部分，在这门课程中，你将学习以下内容：

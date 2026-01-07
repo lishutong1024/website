@@ -2,7 +2,7 @@
 title: 从0手写TCP/IP协议栈
 author: 李述铜
 createTime: 2024/08/07 16:55:46
-permalink: /courses/yoo395mi/
+permalink: /course/tcpip/
 ---
 如果说[《从0手写x86操作系统》](diylinux.md)关注的是计算机底层系统的运行，是深入了解操作系统运行原理的最佳课程；那么《从0手写TCP/IP协议栈》则关注的是计算机与计算机之间的数据通信机制的实现。
 
