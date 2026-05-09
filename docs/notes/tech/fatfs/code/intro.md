@@ -51,3 +51,7 @@ permalink: /tech/fatfs/47usho1i/
 ## 课程要求
 课程的一部分内容采用的是Windows + Visual Studio开发环境（建议使用VS2022）进行实验录制。**配套源码包中提供了Visual Studio的工程**。
 
+:::tip
+🔥 想从零开始理解RTOS原理、手写可运行RTOS内核？
+👉 [点击了解课程详情](https://lishutong1024.cn/article/ceok23ne/)
+:::

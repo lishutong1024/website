@@ -105,3 +105,8 @@ static FATFS *FatFs[FF_VOLUMES];	/* Pointer to the filesystem objects (logical d
 ## 补充资料
 * 硬盘分区表MBR：[https://blog.csdn.net/bingqingsuimeng/article/details/50585304](https://blog.csdn.net/bingqingsuimeng/article/details/50585304)
 * FAT32文件系统规范：见[资料下载](../download.md)中的相关文档。
+
+:::tip
+🔥 想从零开始理解RTOS原理、手写可运行RTOS内核？
+👉 [点击了解课程详情](https://lishutong1024.cn/article/ceok23ne/)
+:::

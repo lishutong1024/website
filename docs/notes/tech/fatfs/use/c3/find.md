@@ -122,3 +122,7 @@ void find_image_file (void)
 
 并且，我们可以看到，这两个函数采用的是基于文件名的匹配查找；因此，如果需要查找指定属性的文件（如只获取目录），那么仍然需要自己利用f_readdir()读取进行过滤查找。
 
+:::tip
+🔥 想从零开始理解RTOS原理、手写可运行RTOS内核？
+👉 [点击了解课程详情](https://lishutong1024.cn/article/ceok23ne/)
+:::

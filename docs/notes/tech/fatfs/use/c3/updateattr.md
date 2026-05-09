@@ -158,3 +158,7 @@ FRESULT set_timestamp (
 ```
 从上面的代码可以看到，虽然f_tuime传入了整个FILINFO结构，但实际上这个结构中使用的只是fdate和ftime两个字段，其它内容并不会影响。所以不需要对其它字段进行任何初始化设置。
 
+:::tip
+🔥 想从零开始理解RTOS原理、手写可运行RTOS内核？
+👉 [点击了解课程详情](https://lishutong1024.cn/article/ceok23ne/)
+:::

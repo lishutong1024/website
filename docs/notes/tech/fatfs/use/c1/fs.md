@@ -66,3 +66,8 @@ permalink: /tech/fatfs/5zlvcsn3/
 -  **EXT2/EXT3/EXT4**：通常用于Linux系统的文件系统，但也可以移植到嵌入式设备上，具有较强的性能和数据完整性保护。 [https://ext4.wiki.kernel.org/index.php/Main_Page](https://ext4.wiki.kernel.org/index.php/Main_Page)
 
 这些文件系统具有不同的特点和适用范围，嵌入式设备的选择取决于具体需求和硬件平台。
+
+:::tip
+🔥 想从零开始理解RTOS原理、手写可运行RTOS内核？
+👉 [点击了解课程详情](https://lishutong1024.cn/article/ceok23ne/)
+:::

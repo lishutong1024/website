@@ -72,5 +72,9 @@ printf("%10lu KiB 总驱动空间。\n%10lu KiB 可用。\n", tot_sect / 2, fre_
 
 不过，由于FSINFO的值在一些情况下可能不对，所以想要获取最为准确的信息，则需要遍历扫描整个FAT表，找到未被使用的簇并统计，但是这个过程是比较耗时的。如需要使用该功能，可配置`FF_FS_NOFSINFO`项来强制扫描整个FAT表。
 
+:::tip
+🔥 想从零开始理解RTOS原理、手写可运行RTOS内核？
+👉 [点击了解课程详情](https://lishutong1024.cn/article/ceok23ne/)
+:::
 
 

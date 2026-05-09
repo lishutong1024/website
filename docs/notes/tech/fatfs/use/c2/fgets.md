@@ -74,3 +74,8 @@ TCHAR* f_gets (
 需要注意的是，f_gets函数是f_read函数的包装函数，它用于从文件中读取字符串。此函数在`FF_USE_STRFUNC`大于或等于1时可用。当设置为2时，文件中包含的'\r'将被去除。
 
 f_gets函数常用于从文本文件中逐行读取文本。
+
+:::tip
+🔥 想从零开始理解RTOS原理、手写可运行RTOS内核？
+👉 [点击了解课程详情](https://lishutong1024.cn/article/ceok23ne/)
+:::

@@ -278,4 +278,8 @@ FATFS往往跑在嵌入式调备上，并且有时会和RTOS一起结合使用�
 
 f_disk和f_mkfs等接口的支持，会在后面有关嵌入式平台上讲移植时有所涉及。
 
+:::tip
+🔥 想从零开始理解RTOS原理、手写可运行RTOS内核？
+👉 [点击了解课程详情](https://lishutong1024.cn/article/ceok23ne/)
+:::
 

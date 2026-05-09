@@ -68,4 +68,8 @@ FATFS（File Allocation Table File System）是一个轻量级的文件系统，
 
 当然，这些只是基础的要求。如果你想对FATFS的使用能够做得更加地熟练，对其工作机理理解的更为深入，欢迎学习我的完整系列课程。
 
+:::tip
+🔥 想从零开始理解RTOS原理、手写可运行RTOS内核？
+👉 [点击了解课程详情](https://lishutong1024.cn/article/ceok23ne/)
+:::
 

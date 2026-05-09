@@ -137,6 +137,10 @@ int ff_mutex_create (	/* Returns 1:Function succeeded or 0:Could not create the 
 }
 ```
 
+:::tip
+🔥 想从零开始理解RTOS原理、手写可运行RTOS内核？
+👉 [点击了解课程详情](https://lishutong1024.cn/article/ceok23ne/)
+:::
 
 
 

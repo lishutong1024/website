@@ -73,3 +73,7 @@ int f_error (
 
 但是在某些情况下，调用f_read()时其错误结果不会立即使用，或者这个结果需要被缓存。为了简化起见，可以直接使用f_error()，因为f_read()等函数内部实际会将操作结果保存在FIL结构内部，而f_error()就是直接取出这个缓存的结果。
 
+:::tip
+🔥 想从零开始理解RTOS原理、手写可运行RTOS内核？
+👉 [点击了解课程详情](https://lishutong1024.cn/article/ceok23ne/)
+:::

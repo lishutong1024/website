@@ -53,3 +53,7 @@ permalink: /tech/fatfs/pd61lgrf/
 
 在涉及到开发板相关的移植工作时，请自备相应的开发板。
 
+:::tip
+🔥 想从零开始理解RTOS原理、手写可运行RTOS内核？
+👉 [点击了解课程详情](https://lishutong1024.cn/article/ceok23ne/)
+:::

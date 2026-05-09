@@ -4,6 +4,10 @@ author: 李述铜
 createTime: 2025/08/30 12:41:53
 permalink: /tech/rtthread/u0fyii6n/
 ---
+:::tip
+🔥 想从零开始理解RTOS原理、手写可运行RTOS内核？
+👉 [点击了解课程详情](https://lishutong1024.cn/article/ceok23ne/)
+:::
 <font style="color:#DF2A3F;">注意：本知识库仅用于视频内容的补充，部分在视频中讲的内容不会在该知识库中重复给出。因此，该知识库并不能完全替代视频内容。</font>
 
 <font style="color:#DF2A3F;">此外，本课程为免费开放的课程，不提供任何形式的答疑和支持。</font>

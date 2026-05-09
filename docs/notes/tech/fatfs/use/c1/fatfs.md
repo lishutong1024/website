@@ -58,3 +58,7 @@ FATFS文档及代码下载链接：[http://elm-chan.org/fsw/ff/00index_e.html](h
 ## 注意事项
 FATFS的各项接口设计，有的参考了标准C库中相关文件访问的接口，有的参考了Linux系统上的文件访问相关的系统调用接口。
 
+:::tip
+🔥 想从零开始理解RTOS原理、手写可运行RTOS内核？
+👉 [点击了解课程详情](https://lishutong1024.cn/article/ceok23ne/)
+:::

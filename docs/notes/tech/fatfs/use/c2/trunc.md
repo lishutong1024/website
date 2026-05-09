@@ -45,3 +45,8 @@ FRESULT f_truncate (
 f_truncate()使用当前文件读写指针的位置进行截断。因此，如果想让文件缩减到指定的大小，则需要先用f_lseek()定位到相应的位置，然后再调用f_truncate()。
 
 特殊的，如果想让文件被截断为0，则可以将文件的读写位置用f_rewind()调整到开头，再使用f_truncate()；或者在f_open()时传递FA_CREATE_ALWAYS参数。
+
+:::tip
+🔥 想从零开始理解RTOS原理、手写可运行RTOS内核？
+👉 [点击了解课程详情](https://lishutong1024.cn/article/ceok23ne/)
+:::

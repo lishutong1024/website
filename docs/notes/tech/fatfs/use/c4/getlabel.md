@@ -113,3 +113,8 @@ f_getlabel("2:", str, 0);
 ```
 ## 注意事项
 卷序列号一般没什么用，其存储在FAT文件系统中的BPB结构的Volume ID字段中。
+
+:::tip
+🔥 想从零开始理解RTOS原理、手写可运行RTOS内核？
+👉 [点击了解课程详情](https://lishutong1024.cn/article/ceok23ne/)
+:::

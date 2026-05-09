@@ -398,3 +398,7 @@ SD命令格式如下所示：
 连续多块读取：[连续写入](/other/fatfs/Read_mulblock.dsl)
 
 
+:::tip
+🔥 想从零开始理解RTOS原理、手写可运行RTOS内核？
+👉 [点击了解课程详情](https://lishutong1024.cn/article/ceok23ne/)
+:::

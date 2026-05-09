@@ -145,3 +145,7 @@ D:\tongban\course\develop\learn_fatfs\c02.02\app.c
 0:/tongban/course/develop/learn_fatfs/c02.02/app.c
 ```
 
+:::tip
+🔥 想从零开始理解RTOS原理、手写可运行RTOS内核？
+👉 [点击了解课程详情](https://lishutong1024.cn/article/ceok23ne/)
+:::

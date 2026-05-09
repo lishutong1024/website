@@ -46,3 +46,8 @@ int f_putc(
 - 
 ## 注意事项
 与f_gets()相同，f_puts()也存在\r\n转换的问题。只不过是在写入时，碰到\n是否会转换成\r\n。该功能的配置方法与f_gets()的配置相同。
+
+:::tip
+🔥 想从零开始理解RTOS原理、手写可运行RTOS内核？
+👉 [点击了解课程详情](https://lishutong1024.cn/article/ceok23ne/)
+:::
